@@ -107,7 +107,7 @@
     padding: 35px 15px;
     font-size: 18px;
     text-transform: uppercase;
-    color: var(--light);
+    color: var(--dark);
     outline: none;
     transition: .5s;
 }
@@ -268,4 +268,26 @@
     left: -40px;
     background: var(--primary);
     transform: skew(40deg);
+}
+
+/* CUSTOM CSS */
+
+/* Ensure the logo scales properly */
+.header-brand-img {
+    height: auto; /* Maintain aspect ratio */
+    max-height: 70px; /* Adjust based on your needs */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Make adjustments for smaller screens using media queries */
+@media (max-width: 576px) {
+    .header-brand-img {
+        max-height: 50px; /* Smaller size for very small screens */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .header-brand-img {
+        max-height: 60px; /* Medium size for tablets */
+    }
 }

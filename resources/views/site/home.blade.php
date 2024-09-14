@@ -68,10 +68,10 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
-        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
+    <div class="container-fluid sticky-top bg-light bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-light bg-light-radial navbar-light py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt="" class="header-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
