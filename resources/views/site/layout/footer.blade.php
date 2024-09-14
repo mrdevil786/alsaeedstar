@@ -2,9 +2,8 @@
 <div class="footer container-fluid position-relative bg-light bg-light-radial text-black-50 py-6 px-5">
     <div class="row g-5">
         <div class="col-lg-6 pe-lg-5">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-uppercase text-black"><i
-                        class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
+            <a href="{{ url('/') }}" class="mb-3 navbar-brand d-flex align-items-center">
+                <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt="" class="header-brand-img">
             </a>
             <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam sed clita
                 dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
