@@ -118,7 +118,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-dark .navbar-nav .nav-link  {
+    .navbar-dark .navbar-nav .nav-link {
         margin-left: 0;
         padding: 10px 0;
     }
@@ -241,6 +241,7 @@
 }
 
 @media (min-width: 992px) {
+
     .testimonial,
     .contact-form {
         margin-left: -90px;
@@ -272,22 +273,26 @@
 
 /* CUSTOM CSS */
 
-/* Ensure the logo scales properly */
 .header-brand-img {
-    height: auto; /* Maintain aspect ratio */
-    max-height: 70px; /* Adjust based on your needs */
-    width: auto; /* Maintain aspect ratio */
+    height: auto;
+    max-height: 70px;
+    width: auto;
 }
 
-/* Make adjustments for smaller screens using media queries */
 @media (max-width: 576px) {
     .header-brand-img {
-        max-height: 50px; /* Smaller size for very small screens */
+        max-height: 50px;
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
     .header-brand-img {
-        max-height: 60px; /* Medium size for tablets */
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header-brand-img {
+        max-height: 35px;
     }
 }
