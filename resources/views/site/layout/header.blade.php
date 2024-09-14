@@ -50,7 +50,7 @@
                     <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Email Us</h6>
-                        <span>info@example.com</span>
+                        <span>info@alsaeedstar.com</span>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Call Us</h6>
-                        <span>+012 345 6789</span>
+                        <span>+966 53 616 1198</span>
                     </div>
                 </div>
             </div>
