@@ -70,7 +70,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top bg-light bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-light bg-light-radial navbar-light py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center">
                 <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt="" class="header-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -638,11 +638,11 @@
 
 
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
+    <div class="footer container-fluid position-relative bg-light bg-light-radial text-black-50 py-6 px-5">
         <div class="row g-5">
             <div class="col-lg-6 pe-lg-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
+                    <h1 class="m-0 display-4 text-uppercase text-black"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
                 </a>
                 <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
                 <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
@@ -658,27 +658,27 @@
             <div class="col-lg-6 ps-lg-5">
                 <div class="row g-5">
                     <div class="col-sm-6">
-                        <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
+                        <h4 class="text-black text-uppercase mb-4">Quick Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-black-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
+                        <h4 class="text-black text-uppercase mb-4">Popular Links</h4>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-black-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
+                        <h4 class="text-black text-uppercase mb-4">Newsletter</h4>
                         <div class="w-100">
                             <div class="input-group">
                                 <input type="text" class="form-control border-light" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
@@ -689,12 +689,12 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
+    <div class="container-fluid bg-light bg-light-radial border-top border-primary px-0">
         <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="py-4 px-5 text-center text-md-start">
+            <div class="py-4 px-5 text-center text-black text-md-start">
                 <p class="mb-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
             </div>
-            <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
+            <div class="py-4 px-5 bg-primary footer-shape text-white position-relative text-center text-md-end">
                 <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
                 <p class="mb-0">Distributed by <a class="text-dark" href="https://themewagon.com">ThemeWagon</a></p>
             </div>
