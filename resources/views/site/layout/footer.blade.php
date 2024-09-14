@@ -7,7 +7,7 @@
             </a>
             <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam sed clita
                 dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-            <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
+            <p><a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8"><i class="fa fa-map-marker-alt me-2"></i>Thabit Ibn Uddai, Ad Dhubbat, Riyadh 12623, KSA</a></p>
             <p><a href="tel:+966536161198"><i class="fa fa-phone-alt me-2"></i>+966 53 616 1198</a></p>
             <p><a href="mailto:info@alsaeedstar.com"><i class="fa fa-envelope me-2"></i>info@alsaeedstar.com</a></p>
             <div class="d-flex justify-content-start mt-4">
@@ -67,8 +67,7 @@
                 {{ date('Y') }}. All Rights Reserved.</p>
         </div>
         <div class="py-4 px-5 bg-primary footer-shape text-white position-relative text-center text-md-end">
-            <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
-            <p class="mb-0">Distributed by <a class="text-dark" href="https://themewagon.com">ThemeWagon</a></p>
+            <p class="mb-0">Designed & Developed by <a class="text-dark" href="{{ url('/') }}">{{ env('APP_NAME') }}</a></p>
         </div>
     </div>
 </div>

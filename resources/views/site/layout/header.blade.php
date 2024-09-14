@@ -41,7 +41,7 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
-                        <span>123 Street, New York, USA</span>
+                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8">Thabit Ibn Uddai, Ad Dhubbat, Riyadh 12623, KSA</a>
                     </div>
                 </div>
             </div>
