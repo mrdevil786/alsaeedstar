@@ -1,5 +1,8 @@
 @extends('site.layout.main')
 
+@section('frontend-title-section','Home')
+@section('frontend-home-section','active')
+
 @section('frontend-main-section')
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
