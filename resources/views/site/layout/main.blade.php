@@ -1,5 +1,5 @@
-@include('admin.layout.header')
+@include('site.layout.header')
 
-@yield('admin-main-section')
+@yield('frontend-main-section')
 
-@include('admin.layout.footer')
+@include('site.layout.footer')
