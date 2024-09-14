@@ -50,7 +50,7 @@
                     <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Email Us</h6>
-                        <span>info@alsaeedstar.com</span>
+                        <a href="mailto:info@alsaeedstar.com">info@alsaeedstar.com</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Call Us</h6>
-                        <span>+966 53 616 1198</span>
+                        <a href="tel:+966536161198">+966 53 616 1198</a>
                     </div>
                 </div>
             </div>
