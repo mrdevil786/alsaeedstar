@@ -370,106 +370,43 @@
                 Workers</h1>
         </div>
         <div class="row g-5">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="row g-0">
-                    <div class="col-10" style="min-height: 300px;">
-                        <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-1.jpg') }}"
-                                style="object-fit: cover;">
+            @foreach ($teams as $team)
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="row g-0">
+                        <div class="col-10" style="min-height: 300px;">
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100" src="{{ asset($team->image) }}"
+                                    style="object-fit: cover;">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
-                            <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+                        <div class="col-2">
+                            <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
+                                @if ($team->twitter)
+                                    <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
+                                @endif
+                                @if ($team->facebook)
+                                    <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
+                                @endif
+                                @if ($team->linkedin)
+                                    <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                @endif
+                                @if ($team->instagram)
+                                    <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
+                                @endif
+                                @if ($team->youtube)
+                                    <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
+                                @endif
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="bg-light p-4">
-                            <h4 class="text-uppercase">Adam Phillips</h4>
-                            <span>CEO & Founder</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="row g-0">
-                    <div class="col-10" style="min-height: 300px;">
-                        <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-2.jpg') }}"
-                                style="object-fit: cover;">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
-                            <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="bg-light p-4">
-                            <h4 class="text-uppercase">Dylan Adams</h4>
-                            <span>Civil Engineer</span>
+                        <div class="col-12">
+                            <div class="bg-light p-4">
+                                <h4 class="text-uppercase">{{ $team->name }}</h4>
+                                <span>{{ $team->designation }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="row g-0">
-                    <div class="col-10" style="min-height: 300px;">
-                        <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-3.jpg') }}"
-                                style="object-fit: cover;">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
-                            <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="bg-light p-4">
-                            <h4 class="text-uppercase">Jhon Doe</h4>
-                            <span>Interior Designer</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="row g-0">
-                    <div class="col-10" style="min-height: 300px;">
-                        <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-4.jpg') }}"
-                                style="object-fit: cover;">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
-                            <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="bg-light p-4">
-                            <h4 class="text-uppercase">Josh Dunn</h4>
-                            <span>Painter</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <!-- Team End -->
