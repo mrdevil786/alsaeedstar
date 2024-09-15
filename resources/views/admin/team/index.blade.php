@@ -77,7 +77,7 @@
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->youtube }}')">
+                                                onclick="copyToClipboard('{{ $team->profile_link }}')">
                                                 <i class="fa fa-copy"></i>
                                             </button>
                                         </td>
