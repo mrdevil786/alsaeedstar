@@ -31,8 +31,8 @@ class TeamsController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
             'twitter' => 'nullable|string|max:255',
             'facebook' => 'nullable|string|max:255',
-            'linkedin' => 'nullable|string|max:255',
-            'instagram' => 'required|string|max:255',
+            'linkedin' => 'required|string|max:255',
+            'instagram' => 'nullable|string|max:255',
             'youtube' => 'nullable|string|max:255',
         ]);
 
