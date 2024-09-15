@@ -71,7 +71,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top bg-light bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-light bg-light-radial navbar-light py-3 py-lg-0">
-            <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center">
+            <a href="{{ route('frontend.home') }}" class="navbar-brand d-flex align-items-center">
                 <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt="" class="header-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -79,8 +79,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="{{ route('frontend.home') }}" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
+                    <a href="{{ route('frontend.about') }}" class="nav-item nav-link @yield('frontend-about-section')">About</a>
                     <a href="service.html" class="nav-item nav-link">Service</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -92,7 +92,7 @@
                             <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="{{ route('frontend.contact') }}" class="nav-item nav-link @yield('frontend-contact-section')">Contact</a>
                     <a href="" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A
                         Quote <i class="bi bi-arrow-right"></i></a>
                 </div>
