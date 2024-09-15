@@ -1,8 +1,8 @@
-@extends('admin.layout.main')
+@extends('layout.main')
 
-@section('admin-page-title', 'Teams')
+@section('page-title', 'Teams')
 
-@section('admin-main-section')
+@section('main-section')
 
     <!-- PAGE-HEADER -->
     <div class="page-header">
@@ -28,15 +28,12 @@
                         <table class="table table-bordered text-nowrap border-bottomm" id="file-datatable">
                             <thead>
                                 <tr>
-                                    <th class="wd-15p border-bottom-0"><i class="fa fa-list"></i></th>
+                                    <th class="wd-15p border-bottom-0">#</th>
                                     <th class="wd-15p border-bottom-0">Image</th>
                                     <th class="wd-20p border-bottom-0">Name</th>
                                     <th class="wd-15p border-bottom-0">Designation</th>
-                                    <th class="wd-15p border-bottom-0"><i class="fa fa-twitter"></i></th>
-                                    <th class="wd-15p border-bottom-0"><i class="fa fa-facebook"></i></th>
-                                    <th class="wd-15p border-bottom-0"><i class="fa fa-linkedin"></i></th>
-                                    <th class="wd-15p border-bottom-0"><i class="fa fa-instagram"></i></th>
-                                    <th class="wd-15p border-bottom-0"><i class="fa fa-youtube"></i></th>
+                                    <th class="wd-15p border-bottom-0">Link</th>
+                                    <th class="wd-15p border-bottom-0">Section</th>
                                     @if (auth()->user()->user_role == 1)
                                         <th class="wd-25p border-bottom-0">Status</th>
                                     @endif
@@ -53,33 +50,18 @@
                                         <td>{{ $team->designation }}</td>
                                         <td>
                                             <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->twitter }}')">
+                                                onclick="copyToClipboard('{{ $team->profile_link }}')">
                                                 <i class="fa fa-copy"></i>
                                             </button>
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->facebook }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->linkedin }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->instagram }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->youtube }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
+                                            @if ($team->section == 1)
+                                                Our Team
+                                            @elseif($team->section == 2)
+                                                Global Advisor
+                                            @else
+                                                Unknown
+                                            @endif
                                         </td>
                                         @if (auth()->user()->user_role == 1)
                                             <td class="text-center">
@@ -134,6 +116,7 @@
         <x-fields.input-field label="Full Name" name="name" />
         <x-fields.input-field label="Designation" name="designation" />
         <x-fields.input-field label="LinkedIn Profile Link" name="profile_link" />
+        <x-fields.dropdown-field label="Section" name="section" :options="[1 => 'Our Team', 2 => 'Global Advisor']" />
 
     </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
