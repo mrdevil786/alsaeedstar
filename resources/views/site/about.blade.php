@@ -42,11 +42,12 @@
                 </div>
                 <p class="mb-4">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et,
                     tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos labore</p>
-                <img src="img/signature.jpg" alt="">
+                <img src="{{ asset('frontend/img/signature.jpg') }}" alt="">
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
-                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="{{ asset('frontend/img/about.jpg') }}" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="{{ asset('frontend/img/about.jpg') }}"
+                        style="object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -120,7 +121,8 @@
                 <div class="row g-0">
                     <div class="col-10" style="min-height: 300px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="img/team-1.jpg" style="object-fit: cover;">
+                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-1.jpg') }}"
+                                style="object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-2">
@@ -144,7 +146,8 @@
                 <div class="row g-0">
                     <div class="col-10" style="min-height: 300px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="img/team-2.jpg" style="object-fit: cover;">
+                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-2.jpg') }}"
+                                style="object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-2">
@@ -168,7 +171,8 @@
                 <div class="row g-0">
                     <div class="col-10" style="min-height: 300px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="img/team-3.jpg" style="object-fit: cover;">
+                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-3.jpg') }}"
+                                style="object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-2">
@@ -192,7 +196,8 @@
                 <div class="row g-0">
                     <div class="col-10" style="min-height: 300px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute w-100 h-100" src="img/team-4.jpg" style="object-fit: cover;">
+                            <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/team-4.jpg') }}"
+                                style="object-fit: cover;">
                         </div>
                     </div>
                     <div class="col-2">

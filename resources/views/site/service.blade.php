@@ -27,7 +27,7 @@
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-1.jpg" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-1.jpg') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-building text-primary"></i>
                     </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-2.jpg" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-2.jpg') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-home text-primary"></i>
                     </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-3.jpg" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-3.jpg') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-drafting-compass text-primary"></i>
                     </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-4.jpg" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-4.jpg') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-palette text-primary"></i>
                     </div>
@@ -83,7 +83,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-5.jpg" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-5.jpg') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-tools text-primary"></i>
                     </div>
@@ -97,7 +97,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="img/service-6.jpg" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-6.jpg') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-paint-brush text-primary"></i>
                     </div>
@@ -176,7 +176,7 @@
         </div>
         <div class="row gx-0 align-items-center">
             <div class="col-xl-4 col-lg-5 d-none d-lg-block">
-                <img class="img-fluid w-100 h-100" src="img/testimonial.jpg">
+                <img class="img-fluid w-100 h-100" src="{{ asset('frontend/img/testimonial.jpg') }}">
             </div>
             <div class="col-xl-8 col-lg-7 col-md-12">
                 <div class="testimonial bg-light">
@@ -184,7 +184,7 @@
                         <div class="row gx-4 align-items-center">
                             <div class="col-xl-4 col-lg-5 col-md-5">
                                 <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
-                                    src="img/testimonial-1.jpg" alt="">
+                                    src="{{ asset('frontend/img/testimonial-1.jpg') }}" alt="">
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-7">
                                 <h4 class="text-uppercase mb-0">Client Name</h4>
@@ -199,7 +199,7 @@
                         <div class="row gx-4 align-items-center">
                             <div class="col-xl-4 col-lg-5 col-md-5">
                                 <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
-                                    src="img/testimonial-2.jpg" alt="">
+                                    src="{{ asset('frontend/img/testimonial-2.jpg') }}" alt="">
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-7">
                                 <h4 class="text-uppercase mb-0">Client Name</h4>
