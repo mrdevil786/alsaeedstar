@@ -95,10 +95,10 @@
                                             <td>Null</td>
                                         @endif
 
-                                        @if (!empty($team->profile_link))
+                                        @if (!empty($team->youtube))
                                             <td>
                                                 <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                    onclick="copyToClipboard('{{ $team->profile_link }}')">
+                                                    onclick="copyToClipboard('{{ $team->youtube }}')">
                                                     <i class="fa fa-copy"></i>
                                                 </button>
                                             </td>
