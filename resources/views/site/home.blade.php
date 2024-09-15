@@ -371,7 +371,7 @@
         </div>
         <div class="row g-5 justify-content-center">
             @if ($teams->isEmpty())
-                <div class="col-12">
+                <div class="col-12 text-center">
                     <p>No team members found.</p>
                 </div>
             @else
