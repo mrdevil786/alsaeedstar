@@ -11,6 +11,16 @@ return [
             ],
         ],
     ],
+    'teams' => [
+        'items' => [
+            [
+                'label' => 'Teams',
+                'icon' => 'fe fe-users',
+                'route' => 'admin.teams.index',
+                'active' => 'admin/teams*',
+            ],
+        ],
+    ],
     'tools' => [
         'title' => 'Tools & Management',
         'items' => [
