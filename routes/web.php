@@ -24,7 +24,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
 
         // Routes for admins
         Route::middleware('admin')->group(function () {
-            Route::delete('/{id}', 'destroy')->name('destroy');
+            Route::get('/{id}', 'destroy')->name('destroy');
             Route::put('status', 'status')->name('status');
             Route::post('create', 'create')->name('create');
         });

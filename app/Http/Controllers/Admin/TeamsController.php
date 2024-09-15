@@ -29,11 +29,11 @@ class TeamsController extends Controller
             'name' => 'required|string|max:255',
             'designation' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
-            'twitter' => 'required|string|max:255',
-            'facebook' => 'required|string|max:255',
-            'linkedin' => 'required|string|max:255',
+            'twitter' => 'nullable|string|max:255',
+            'facebook' => 'nullable|string|max:255',
+            'linkedin' => 'nullable|string|max:255',
             'instagram' => 'required|string|max:255',
-            'youtube' => 'required|string|max:255',
+            'youtube' => 'nullable|string|max:255',
         ]);
 
         $team = new Team();

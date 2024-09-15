@@ -51,36 +51,61 @@
                                                 class="avatar avatar-sm br-7" src="{{ asset($team->image) }}"></td>
                                         <td>{{ $team->name }}</td>
                                         <td>{{ $team->designation }}</td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->twitter }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->facebook }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->linkedin }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->instagram }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
-                                                onclick="copyToClipboard('{{ $team->profile_link }}')">
-                                                <i class="fa fa-copy"></i>
-                                            </button>
-                                        </td>
+                                        @if (!empty($team->twitter))
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
+                                                    onclick="copyToClipboard('{{ $team->twitter }}')">
+                                                    <i class="fa fa-copy"></i>
+                                                </button>
+                                            </td>
+                                        @else
+                                            <td>Null</td>
+                                        @endif
+
+                                        @if (!empty($team->facebook))
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
+                                                    onclick="copyToClipboard('{{ $team->facebook }}')">
+                                                    <i class="fa fa-copy"></i>
+                                                </button>
+                                            </td>
+                                        @else
+                                            <td>Null</td>
+                                        @endif
+
+                                        @if (!empty($team->linkedin))
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
+                                                    onclick="copyToClipboard('{{ $team->linkedin }}')">
+                                                    <i class="fa fa-copy"></i>
+                                                </button>
+                                            </td>
+                                        @else
+                                            <td>Null</td>
+                                        @endif
+
+                                        @if (!empty($team->instagram))
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
+                                                    onclick="copyToClipboard('{{ $team->instagram }}')">
+                                                    <i class="fa fa-copy"></i>
+                                                </button>
+                                            </td>
+                                        @else
+                                            <td>Null</td>
+                                        @endif
+
+                                        @if (!empty($team->profile_link))
+                                            <td>
+                                                <button type="button" class="btn btn-outline-secondary btn-pill btn-sm"
+                                                    onclick="copyToClipboard('{{ $team->profile_link }}')">
+                                                    <i class="fa fa-copy"></i>
+                                                </button>
+                                            </td>
+                                        @else
+                                            <td>Null</td>
+                                        @endif
+
                                         @if (auth()->user()->user_role == 1)
                                             <td class="text-center">
                                                 <label class="custom-switch form-switch mb-0">
@@ -121,19 +146,21 @@
     <!--Add Modal - Right Offcanvas-->
     <x-modal.right-offcanvas title="Add New Team" action="{{ route('admin.teams.store') }}" method="POST">
 
-        {{-- <x-fields.input-field label="Image" name="image" type="file" /> --}}
-
         <div class="col-lg-12 mb-3">
             <label class="form-label mt-0" for="image">Image</label>
             <input type="file" class="dropify" name="image" data-bs-height="180" />
-            @error('profile_link')
+            @error('image')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
 
         <x-fields.input-field label="Full Name" name="name" />
         <x-fields.input-field label="Designation" name="designation" />
-        <x-fields.input-field label="LinkedIn Profile Link" name="profile_link" />
+        <x-fields.input-field label="Twitter Link" name="twitter" />
+        <x-fields.input-field label="Facebook Link" name="facebook" />
+        <x-fields.input-field label="Linkedin Link" name="linkedin" />
+        <x-fields.input-field label="Instagram Link" name="instagram" />
+        <x-fields.input-field label="Youtube Link" name="youtube" />
 
     </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
