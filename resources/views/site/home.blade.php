@@ -369,7 +369,7 @@
             <h1 class="display-5 text-uppercase mb-4">We Are <span class="text-primary">Professional & Expert</span>
                 Workers</h1>
         </div>
-        <div class="row g-5">
+        <div class="row g-5 justify-content-center">
             @if ($teams->isEmpty())
                 <div class="col-12">
                     <p>No team members found.</p>
