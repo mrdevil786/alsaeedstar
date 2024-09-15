@@ -370,43 +370,49 @@
                 Workers</h1>
         </div>
         <div class="row g-5">
-            @foreach ($teams as $team)
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="row g-0">
-                        <div class="col-10" style="min-height: 300px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100" src="{{ asset($team->image) }}"
-                                    style="object-fit: cover;">
+            @if ($teams->isEmpty())
+                <div class="col-12">
+                    <p>No team members found.</p>
+                </div>
+            @else
+                @foreach ($teams as $team)
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="row g-0">
+                            <div class="col-10" style="min-height: 300px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute w-100 h-100" src="{{ asset($team->image) }}"
+                                        style="object-fit: cover;">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
-                                @if ($team->twitter)
-                                    <a class="btn" href="#"><i class="fab fa-twitter"></i></a>
-                                @endif
-                                @if ($team->facebook)
-                                    <a class="btn" href="#"><i class="fab fa-facebook-f"></i></a>
-                                @endif
-                                @if ($team->linkedin)
-                                    <a class="btn" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                @endif
-                                @if ($team->instagram)
-                                    <a class="btn" href="#"><i class="fab fa-instagram"></i></a>
-                                @endif
-                                @if ($team->youtube)
-                                    <a class="btn" href="#"><i class="fab fa-youtube"></i></a>
-                                @endif
+                            <div class="col-2">
+                                <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
+                                    @if ($team->twitter)
+                                        <a class="btn" href="{{ $team->twitter }}"><i class="fab fa-twitter"></i></a>
+                                    @endif
+                                    @if ($team->facebook)
+                                        <a class="btn" href="{{ $team->facebook }}"><i class="fab fa-facebook-f"></i></a>
+                                    @endif
+                                    @if ($team->linkedin)
+                                        <a class="btn" href="{{ $team->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                                    @endif
+                                    @if ($team->instagram)
+                                        <a class="btn" href="{{ $team->instagram }}"><i class="fab fa-instagram"></i></a>
+                                    @endif
+                                    @if ($team->youtube)
+                                        <a class="btn" href="{{ $team->youtube }}"><i class="fab fa-youtube"></i></a>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="bg-light p-4">
-                                <h4 class="text-uppercase">{{ $team->name }}</h4>
-                                <span>{{ $team->designation }}</span>
+                            <div class="col-12">
+                                <div class="bg-light p-4">
+                                    <h4 class="text-uppercase">{{ $team->name }}</h4>
+                                    <span>{{ $team->designation }}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            @endif
         </div>
     </div>
     <!-- Team End -->
