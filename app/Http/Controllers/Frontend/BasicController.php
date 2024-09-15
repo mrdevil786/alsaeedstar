@@ -11,10 +11,12 @@ class BasicController extends Controller
     {
         return view('site.home');
     }
+
     public function about()
     {
         return view('site.about');
     }
+    
     public function contact()
     {
         return view('site.contact');
