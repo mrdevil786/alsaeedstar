@@ -405,7 +405,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="bg-light p-4">
-                                    <h4 class="text-uppercase">{{ $team->name }}</h4>
+                                    <h6 class="text-uppercase">{{ $team->name }}</h6>
                                     <span>{{ $team->designation }}</span>
                                 </div>
                             </div>
