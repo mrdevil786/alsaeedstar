@@ -41,7 +41,8 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
-                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8">Thabit Ibn Uddai, Ad Dhubbat, Riyadh 12623, KSA</a>
+                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8">Thabit Ibn Uddai, Ad Dhubbat, Riyadh 12623,
+                            KSA</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +82,7 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="{{ route('frontend.home') }}" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
                     <a href="{{ route('frontend.about') }}" class="nav-item nav-link @yield('frontend-about-section')">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="{{ route('frontend.service') }}" class="nav-item nav-link @yield('frontend-service-section')">Service</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
