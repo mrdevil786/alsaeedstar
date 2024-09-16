@@ -42,7 +42,7 @@
                 </div>
                 <p class="mb-4">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et,
                     tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos labore</p>
-                <img src="{{ asset('frontend/img/signature.jpg') }}" alt="">
+                <img src="{{ asset('frontend/img/signature.png') }}" alt="">
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
