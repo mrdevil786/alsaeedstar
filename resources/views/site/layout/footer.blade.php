@@ -8,7 +8,7 @@
             <p>Welcome to Al Saeed Star Co. Ltd., where innovation drives excellence in construction, HVAC, IT services,
                 and maintenance. Our expert team delivers precise, tailored solutions to meet your needs with unmatched
                 expertise.</p>
-            <p><a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8"><i class="fa fa-map-marker-alt me-2"></i>Thabit Ibn
+            <p><a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank"><i class="fa fa-map-marker-alt me-2"></i>Thabit Ibn
                     Uddai, Ad Dhubbat, Riyadh 12623, KSA</a></p>
             <p><a href="tel:+966536161198"><i class="fa fa-phone-alt me-2"></i>+966 53 616 1198</a></p>
             <p><a href="mailto:info@alsaeedstar.com"><i class="fa fa-envelope me-2"></i>info@alsaeedstar.com</a></p>

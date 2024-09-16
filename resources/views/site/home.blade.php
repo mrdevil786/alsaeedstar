@@ -387,19 +387,19 @@
                             <div class="col-2">
                                 <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
                                     @if ($team->twitter)
-                                        <a class="btn" href="{{ $team->twitter }}"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn" href="{{ $team->twitter }}" target="blank"><i class="fab fa-twitter"></i></a>
                                     @endif
                                     @if ($team->facebook)
-                                        <a class="btn" href="{{ $team->facebook }}"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn" href="{{ $team->facebook }}" target="blank"><i class="fab fa-facebook-f"></i></a>
                                     @endif
                                     @if ($team->linkedin)
-                                        <a class="btn" href="{{ $team->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn" href="{{ $team->linkedin }}" target="blank"><i class="fab fa-linkedin-in"></i></a>
                                     @endif
                                     @if ($team->instagram)
-                                        <a class="btn" href="{{ $team->instagram }}"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn" href="{{ $team->instagram }}" target="blank"><i class="fab fa-instagram"></i></a>
                                     @endif
                                     @if ($team->youtube)
-                                        <a class="btn" href="{{ $team->youtube }}"><i class="fab fa-youtube"></i></a>
+                                        <a class="btn" href="{{ $team->youtube }}" target="blank"><i class="fab fa-youtube"></i></a>
                                     @endif
                                 </div>
                             </div>
