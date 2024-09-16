@@ -279,8 +279,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-1.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span>
+                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span> --}}
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-1.jpg') }}"
                         data-lightbox="portfolio">
@@ -293,8 +293,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-2.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span>
+                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span> --}}
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-2.jpg') }}"
                         data-lightbox="portfolio">
@@ -307,8 +307,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-3.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span>
+                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span> --}}
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-3.jpg') }}"
                         data-lightbox="portfolio">
@@ -321,8 +321,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-4.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span>
+                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span> --}}
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-4.jpg') }}"
                         data-lightbox="portfolio">
@@ -335,8 +335,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-5.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span>
+                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span> --}}
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-5.jpg') }}"
                         data-lightbox="portfolio">
@@ -349,8 +349,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-6.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span>
+                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span> --}}
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-6.jpg') }}"
                         data-lightbox="portfolio">
