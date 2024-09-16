@@ -3,7 +3,7 @@
     <div class="row g-5">
         <div class="col-lg-6 pe-lg-5">
             <a href="{{ url('/') }}" class="mb-3 navbar-brand d-flex align-items-center">
-                <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt="" class="header-brand-img">
+                <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt="" class="header-brand-img">
             </a>
             <p>Welcome to Al Saeed Star Co. Ltd., where innovation drives excellence in construction, HVAC, IT services,
                 and maintenance. Our expert team delivers precise, tailored solutions to meet your needs with unmatched
