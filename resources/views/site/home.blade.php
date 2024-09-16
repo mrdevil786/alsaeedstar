@@ -74,7 +74,7 @@
                     our clients with precision and excellence. Al Saeed Star Co. Ltd. is your trusted partner for
                     high-quality, reliable, and efficient services that drive success and sustainability in every project we
                     undertake.</p>
-                <img src="{{ asset('frontend/img/signature.jpg') }}" alt="Signature">
+                <img src="{{ asset('frontend/img/signature.png') }}" alt="Signature">
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
