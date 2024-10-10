@@ -21,6 +21,16 @@ return [
             ],
         ],
     ],
+    'testimonials' => [
+        'items' => [
+            [
+                'label' => 'Testimonials',
+                'icon' => 'fe fe-star',
+                'route' => 'admin.testimonials.index',
+                'active' => 'admin/testimonials*',
+            ],
+        ],
+    ],
     'tools' => [
         'title' => 'Tools & Management',
         'items' => [
