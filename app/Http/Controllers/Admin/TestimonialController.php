@@ -25,7 +25,7 @@ class TestimonialController extends Controller
         ]);
 
         if ($request->hasFile('avatar')) {
-            $avatarPath = FileUploader::uploadFile($request->file('avatar'), 'images/testimonioal-image');
+            $avatarPath = FileUploader::uploadFile($request->file('avatar'), 'images/testimonial-image');
         }
 
         Testimonial::create([
@@ -36,5 +36,42 @@ class TestimonialController extends Controller
         ]);
 
         return redirect()->route('admin.testimonials.index')->with('success', 'Testimonial created successfully.');
+    }
+
+    public function edit($id)
+    {
+        $testimonial = Testimonial::findOrFail($id);
+        $isEdit = true;
+        return view('admin.testimonial.edit', compact('testimonial', 'isEdit'));
+    }
+
+    public function view($id)
+    {
+        $testimonial = Testimonial::findOrFail($id);
+        $isEdit = false;
+        return view('admin.testimonial.edit', compact('testimonial', 'isEdit'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $request->validate([
+            'avatar' => 'nullabe|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+        ]);
+
+        $testimonial = Testimonial::findOrFail($id);
+        if ($request->hasFile('avatar')) {
+            $testimonial->avatar = FileUploader::uploadFile($request->file('avatar'), 'images/testimonial-image', $testimonial->avatar);
+        }
+        $testimonial->name = $request->name;
+        $testimonial->title = $request->title;
+        $testimonial->description = $request->description;
+
+        $testimonial->save();
+
+        return redirect()->route('admin.testimonials.index')->with('success', 'Testimonial Updated Successfully');
     }
 }
