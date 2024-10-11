@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('avatar');
             $table->string('name');
             $table->string('title');
-            $table->string('discription');
+            $table->string('description');
             $table->enum('status', ['active', 'blocked'])->default('active');
             $table->timestamps();
         });
