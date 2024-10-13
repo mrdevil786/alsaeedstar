@@ -11,14 +11,9 @@ class BasicController extends Controller
     {
         return view('site.about');
     }
-    
+
     public function service()
     {
         return view('site.service');
-    }
-    
-    public function contact()
-    {
-        return view('site.contact');
     }
 }
