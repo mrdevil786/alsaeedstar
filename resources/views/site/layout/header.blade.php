@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('favicon.png') }}" rel="icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.png') }}" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
