@@ -364,17 +364,13 @@
 
 
     <!-- Team Start -->
-    <div class="container-fluid py-6 px-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">We Are <span class="text-primary">Professional & Expert</span>
-                Workers</h1>
-        </div>
-        <div class="row g-5 justify-content-center">
-            @if ($teams->isEmpty())
-                <div class="col-12 text-center">
-                    <p>No team members found.</p>
-                </div>
-            @else
+    @if (!$teams->isEmpty())
+        <div class="container-fluid py-6 px-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 text-uppercase mb-4">We Are <span class="text-primary">Professional & Expert</span>
+                    Workers</h1>
+            </div>
+            <div class="row g-5 justify-content-center">
                 @foreach ($teams as $team)
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="row g-0">
@@ -387,19 +383,24 @@
                             <div class="col-2">
                                 <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
                                     @if ($team->twitter)
-                                        <a class="btn" href="{{ $team->twitter }}" target="blank"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn" href="{{ $team->twitter }}" target="blank"><i
+                                                class="fab fa-twitter"></i></a>
                                     @endif
                                     @if ($team->facebook)
-                                        <a class="btn" href="{{ $team->facebook }}" target="blank"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn" href="{{ $team->facebook }}" target="blank"><i
+                                                class="fab fa-facebook-f"></i></a>
                                     @endif
                                     @if ($team->linkedin)
-                                        <a class="btn" href="{{ $team->linkedin }}" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <a class="btn" href="{{ $team->linkedin }}" target="blank"><i
+                                                class="fab fa-linkedin-in"></i></a>
                                     @endif
                                     @if ($team->instagram)
-                                        <a class="btn" href="{{ $team->instagram }}" target="blank"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn" href="{{ $team->instagram }}" target="blank"><i
+                                                class="fab fa-instagram"></i></a>
                                     @endif
                                     @if ($team->youtube)
-                                        <a class="btn" href="{{ $team->youtube }}" target="blank"><i class="fab fa-youtube"></i></a>
+                                        <a class="btn" href="{{ $team->youtube }}" target="blank"><i
+                                                class="fab fa-youtube"></i></a>
                                     @endif
                                 </div>
                             </div>
@@ -412,53 +413,46 @@
                         </div>
                     </div>
                 @endforeach
-            @endif
+            </div>
         </div>
-    </div>
+    @endif
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid bg-light py-6 px-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">What Our <span class="text-primary">Happy Cleints</span> Say!!!
-            </h1>
-        </div>
-        <div class="row gx-0 align-items-center">
-            <div class="col-xl-4 col-lg-5 d-none d-lg-block">
-                <img class="img-fluid w-100 h-100" src="{{ asset('frontend/img/testimonial.jpg') }}">
+    @if (!$testimonials->isEmpty())
+        <div class="container-fluid bg-light py-6 px-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 text-uppercase mb-4">What Our <span class="text-primary">Happy Clients</span> Say!!!
+                </h1>
             </div>
-            <div class="col-xl-8 col-lg-7 col-md-12">
-                @if ($testimonials->isEmpty())
-                <div class="col-12 text-center">
-                    <p>No testimonial found.</p>
+            <div class="row gx-0 align-items-center">
+                <div class="col-xl-4 col-lg-5 d-none d-lg-block">
+                    <img class="img-fluid w-100 h-100" src="{{ asset('frontend/img/testimonial.jpg') }}">
                 </div>
-             @else
-                @foreach ($testimonials as $testimonial)
-                <div class="testimonial bg-light">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="row gx-4 align-items-center">
-                            <div class="col-xl-4 col-lg-5 col-md-5">
-
-                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
-                                    src="{{ asset($testimonial->avatar) }}" alt="">
-                            </div>
-                            <div class="col-xl-8 col-lg-7 col-md-7">
-                                <h4 class="text-uppercase mb-0">{{$testimonial->name}}</h4>
-                                <p>{{$testimonial->title}}</p>
-                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i> {{$testimonial->description}}</p>
+                <div class="col-xl-8 col-lg-7 col-md-12">
+                    @foreach ($testimonials as $testimonial)
+                        <div class="testimonial bg-light">
+                            <div class="owl-carousel testimonial-carousel">
+                                <div class="row gx-4 align-items-center">
+                                    <div class="col-xl-4 col-lg-5 col-md-5">
+                                        <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
+                                            src="{{ asset($testimonial->avatar) }}" alt="">
+                                    </div>
+                                    <div class="col-xl-8 col-lg-7 col-md-7">
+                                        <h4 class="text-uppercase mb-0">{{ $testimonial->name }}</h4>
+                                        <p>{{ $testimonial->title }}</p>
+                                        <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i>
+                                            {{ $testimonial->description }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                @endforeach
-           @endif
             </div>
-
         </div>
-    </div>
+    @endif
     <!-- Testimonial End -->
 
 
