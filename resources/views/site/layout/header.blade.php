@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('assets/images/brand/favicon.ico') }}" rel="icon">
+    <link href="{{ asset('favicon.png') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -41,7 +41,8 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
-                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank">Thabit Ibn Uddai, Ad Dhubbat, Riyadh 12623,
+                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank">Thabit Ibn Uddai, Ad Dhubbat,
+                            Riyadh 12623,
                             KSA</a>
                     </div>
                 </div>
@@ -73,7 +74,8 @@
     <div class="container-fluid sticky-top bg-light bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-light bg-light-radial navbar-light py-3 py-lg-0">
             <a href="{{ route('frontend.home') }}" class="navbar-brand d-flex align-items-center">
-                <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt="" class="header-brand-img">
+                <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt=""
+                    class="header-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
