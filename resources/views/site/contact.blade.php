@@ -5,7 +5,6 @@
 
 @section('frontend-main-section')
 
-    <!-- Page Header Start -->
     <div class="container-fluid page-header">
         <h1 class="display-3 text-uppercase text-white mb-3">Contact</h1>
         <div class="d-inline-flex text-white">
@@ -14,10 +13,7 @@
             <h6 class="text-uppercase text-white m-0">Contact</h6>
         </div>
     </div>
-    <!-- Page Header Start -->
 
-
-    <!-- Contact Start -->
     <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">Please <span class="text-primary">Feel Free</span> To Contact Us</h1>
@@ -32,27 +28,78 @@
                 <div class="contact-form bg-light p-5">
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control border-0" placeholder="Your Name"
+                            <input type="text" class="form-control border-0" id="name" placeholder="Your Name"
                                 style="height: 55px;">
+                            <div class="text-danger" id="name-error" style="display:none;"></div>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control border-0" placeholder="Your Email"
+                            <input type="email" class="form-control border-0" id="email" placeholder="Your Email"
                                 style="height: 55px;">
+                            <div class="text-danger" id="email-error" style="display:none;"></div>
                         </div>
                         <div class="col-12">
-                            <input type="text" class="form-control border-0" placeholder="Subject" style="height: 55px;">
+                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject"
+                                style="height: 55px;">
+                            <div class="text-danger" id="subject-error" style="display:none;"></div>
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control border-0" rows="4" placeholder="Message"></textarea>
+                            <textarea class="form-control border-0" id="message" rows="4" placeholder="Message"></textarea>
+                            <div class="text-danger" id="message-error" style="display:none;"></div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                            <button class="btn btn-primary w-100 py-3" id="submit-button" type="button">Send
+                                Message</button>
                         </div>
                     </div>
+                    <div id="success-message" class="mt-3 text-center text-success" style="display:none;"></div>
+                    <div id="error-message" class="mt-3 text-center text-danger" style="display:none;"></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
 
+@endsection
+
+@section('frontend-scripts-section')
+    <script>
+        $(document).ready(function() {
+            $('#submit-button').on('click', function() {
+                const name = $('#name').val();
+                const email = $('#email').val();
+                const subject = $('#subject').val();
+                const message = $('#message').val();
+
+                $.ajax({
+                    url: '{{ route('frontend.contact.store') }}',
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    },
+                    success: function(response) {
+                        $('#success-message').text(response.message).show();
+                        $('#error-message').hide();
+                        $('.text-danger').hide().text('');
+                        $('input, textarea').val('');
+                    },
+                    error: function(xhr) {
+                        $('.text-danger').hide().text('');
+                        if (xhr.status === 422) {
+                            const errors = xhr.responseJSON.errors;
+                            for (let key in errors) {
+                                $('#' + key + '-error').text(errors[key][0]).show();
+                            }
+                        } else {
+                            $('#error-message').text(xhr.responseJSON.message ||
+                                'An error occurred. Please try again.').show();
+                        }
+                        $('#success-message').hide();
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
