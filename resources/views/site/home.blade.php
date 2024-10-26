@@ -9,21 +9,23 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('frontend/img/carousel-1.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/img/carousel-1.webp') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i>
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">Build Your Dream House With Us</h1>
+                            {{-- <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i> --}}
+                            <h1 class="display-2 text-uppercase text-white mb-md-4">Create your dream with us, where every
+                                step brings joy!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Get A Quote</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('frontend/img/carousel-2.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/img/carousel-2.webp') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">We Are Trusted For Your Project</h1>
+                            {{-- <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i> --}}
+                            <h1 class="display-2 text-uppercase text-white mb-md-4">From HVAC to Design and IT to Plumbing,
+                                we build your dream!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Contact Us</a>
                         </div>
                     </div>
@@ -96,90 +98,97 @@
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-1.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-15.webp') }}" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-wind text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">HVAC Systems</h4>
+                        <p>Providing expert HVAC solutions for residential and commercial spaces, focusing on efficient air
+                            conditioning, heating, and ventilation systems to ensure optimal indoor climate control.</p>
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-2.webp') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-building text-primary"></i>
                     </div>
                     <div class="px-4 pb-4">
                         <h4 class="text-uppercase mb-3">Building Construction</h4>
-                        <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet
-                            magna elitr amet kasd diam duo</p>
+                        <p>Delivering comprehensive building construction services, from initial planning to final finishes,
+                            ensuring quality, safety, and durability for residential, commercial, and industrial projects.
+                        </p>
                         <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-2.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-3.webp') }}" alt="">
                     <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-home text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">House Renovation</h4>
-                        <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet
-                            magna elitr amet kasd diam duo</p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-3.jpg') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-drafting-compass text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Architecture Design</h4>
-                        <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet
-                            magna elitr amet kasd diam duo</p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-4.jpg') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-palette text-primary"></i>
+                        <i class="fa fa-3x fa-couch text-primary"></i>
                     </div>
                     <div class="px-4 pb-4">
                         <h4 class="text-uppercase mb-3">Interior Design</h4>
-                        <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet
-                            magna elitr amet kasd diam duo</p>
+                        <p>Creating unique, functional interior spaces that reflect client personalities and needs,
+                            combining aesthetic appeal with practical design for residential and commercial environments.
+                        </p>
                         <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-5.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-4.webp') }}" alt="">
                     <div class="service-icon bg-white">
                         <i class="fa fa-3x fa-tools text-primary"></i>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Fixing & Support</h4>
-                        <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet
-                            magna elitr amet kasd diam duo</p>
+                        <h4 class="text-uppercase mb-3">Electro-Mechanical Works</h4>
+                        <p>Specializing in electro-mechanical installations, including electrical and plumbing systems,
+                            providing reliable, safe, and efficient solutions for diverse residential and commercial needs.
+                        </p>
                         <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-6.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-18.webp') }}" alt="">
                     <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-paint-brush text-primary"></i>
+                        <i class="fa fa-3x fa-umbrella text-primary"></i>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Painting</h4>
-                        <p>Duo dolore et diam sed ipsum stet amet duo diam. Rebum amet ut amet sed erat sed sed amet
-                            magna elitr amet kasd diam duo</p>
+                        <h4 class="text-uppercase mb-3">Shades</h4>
+                        <p>Offering innovative shading solutions, from retractable awnings to custom shade structures,
+                            designed to enhance outdoor comfort and protect against harsh weather conditions.</p>
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="{{ asset('frontend/img/service-17.webp') }}" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-laptop-code text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">Website Development</h4>
+                        <p>Crafting user-friendly, modern websites with responsive design, tailored functionality, and SEO
+                            optimization, aimed at enhancing client visibility and engagement online.</p>
                         <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-primary" href="#">See More <i class="bi bi-arrow-right"></i></a>
+        </div>
     </div>
+
     <!-- Services End -->
 
 
@@ -465,60 +474,60 @@
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
                 <div class="bg-light">
-                    <img class="img-fluid" src="{{ asset('frontend/img/blog-1.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/blog-1.webp') }}" alt="">
                     <div class="p-4">
                         <div class="d-flex justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
-                                    width="35" height="35" alt="">
-                                <span>John Doe</span>
+                                {{-- <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.webp') }}"
+                                    width="35" height="35" alt=""> --}}
+                                <span>Al Najm Al Saeed</span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan,
                                     2045</span>
                             </div>
                         </div>
-                        <h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+                        <h4 class="text-uppercase mb-3">Maximize Comfort: Choosing the Right HVAC System for Your Home</h4>
                         <a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="bg-light">
-                    <img class="img-fluid" src="{{ asset('frontend/img/blog-2.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/blog-2.webp') }}" alt="">
                     <div class="p-4">
                         <div class="d-flex justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
-                                    width="35" height="35" alt="">
-                                <span>John Doe</span>
+                                {{-- <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.webp') }}"
+                                    width="35" height="35" alt=""> --}}
+                                <span>Al Najm Al Saeed</span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan,
                                     2045</span>
                             </div>
                         </div>
-                        <h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+                        <h4 class="text-uppercase mb-3">Enhance Curb Appeal: Best Cladding Options for Modern Homes</h4>
                         <a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="bg-light">
-                    <img class="img-fluid" src="{{ asset('frontend/img/blog-3.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('frontend/img/blog-3.webp') }}" alt="">
                     <div class="p-4">
                         <div class="d-flex justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
-                                    width="35" height="35" alt="">
-                                <span>John Doe</span>
+                                {{-- <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
+                                    width="35" height="35" alt=""> --}}
+                                <span>Al Najm Al Saeed</span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan,
                                     2045</span>
                             </div>
                         </div>
-                        <h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+                        <h4 class="text-uppercase mb-3">Elevate Your Space: Essential Interior Design Tips for Modern Living</h4>
                         <a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>

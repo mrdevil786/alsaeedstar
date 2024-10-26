@@ -85,7 +85,7 @@
                     <a href="{{ route('frontend.home') }}" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
                     <a href="{{ route('frontend.about') }}" class="nav-item nav-link @yield('frontend-about-section')">About</a>
                     <a href="{{ route('frontend.service') }}" class="nav-item nav-link @yield('frontend-service-section')">Service</a>
-                    <div class="nav-item dropdown">
+                    {{-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
                             <a href="project.html" class="dropdown-item">Our Project</a>
@@ -94,7 +94,7 @@
                             <a href="blog.html" class="dropdown-item">Blog Grid</a>
                             <a href="detail.html" class="dropdown-item">Blog Detail</a>
                         </div>
-                    </div>
+                    </div> --}}
                     <a href="{{ route('frontend.contact') }}" class="nav-item nav-link @yield('frontend-contact-section')">Contact</a>
                     <a href="" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A
                         Quote <i class="bi bi-arrow-right"></i></a>
