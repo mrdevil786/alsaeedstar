@@ -11,6 +11,16 @@ return [
             ],
         ],
     ],
+    'contacts' => [
+        'items' => [
+            [
+                'label' => 'Contacts',
+                'icon' => 'fe fe-book',
+                'route' => 'admin.contacts.index',
+                'active' => 'admin/contacts*',
+            ],
+        ],
+    ],
     'teams' => [
         'items' => [
             [
