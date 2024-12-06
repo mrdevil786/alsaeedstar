@@ -1,5 +1,5 @@
 <!-- Footer Start -->
-<div class="footer container-fluid position-relative bg-light bg-light-radial text-black-50 py-6 px-5">
+<div class="footer border-top border-primary container-fluid position-relative bg-light bg-light-radial text-black-50 py-6 px-5">
     <div class="row g-5">
         <div class="col-lg-6 pe-lg-5">
             <a href="{{ url('/') }}" class="mb-3 navbar-brand d-flex align-items-center">

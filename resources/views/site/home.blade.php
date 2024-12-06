@@ -106,7 +106,7 @@
                         <h4 class="text-uppercase mb-3">HVAC Systems</h4>
                         <p>Providing expert HVAC solutions for residential and commercial spaces, focusing on efficient air
                             conditioning, heating, and ventilation systems to ensure optimal indoor climate control.</p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                         <p>Delivering comprehensive building construction services, from initial planning to final finishes,
                             ensuring quality, safety, and durability for residential, commercial, and industrial projects.
                         </p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                         <p>Creating unique, functional interior spaces that reflect client personalities and needs,
                             combining aesthetic appeal with practical design for residential and commercial environments.
                         </p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                         <p>Specializing in electro-mechanical installations, including electrical and plumbing systems,
                             providing reliable, safe, and efficient solutions for diverse residential and commercial needs.
                         </p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
             </div>
@@ -165,7 +165,7 @@
                         <h4 class="text-uppercase mb-3">Shades</h4>
                         <p>Offering innovative shading solutions, from retractable awnings to custom shade structures,
                             designed to enhance outdoor comfort and protect against harsh weather conditions.</p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
             </div>
@@ -179,16 +179,15 @@
                         <h4 class="text-uppercase mb-3">Website Development</h4>
                         <p>Crafting user-friendly, modern websites with responsive design, tailored functionality, and SEO
                             optimization, aimed at enhancing client visibility and engagement online.</p>
-                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-4">
+        {{-- <div class="text-center mt-4">
             <a class="btn btn-primary" href="#">See More <i class="bi bi-arrow-right"></i></a>
-        </div>
+        </div> --}}
     </div>
-
     <!-- Services End -->
 
 
@@ -207,7 +206,7 @@
                 <a class="btn btn-primary py-3 px-5" href="">Get A Quote</a>
             </div>
             <div class="col-lg-8">
-                <div class="bg-light text-center p-5">
+                <div class="bg-light text-center p-3">
                     <form>
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
@@ -248,7 +247,7 @@
 
 
     <!-- Portfolio Start -->
-    <div class="container-fluid bg-light py-6 px-5">
+    {{-- <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream
                 Projects</h1>
@@ -288,8 +287,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-1.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span> --}}
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span>
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-1.jpg') }}"
                         data-lightbox="portfolio">
@@ -302,8 +301,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-2.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span> --}}
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span>
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-2.jpg') }}"
                         data-lightbox="portfolio">
@@ -316,8 +315,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-3.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span> --}}
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span>
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-3.jpg') }}"
                         data-lightbox="portfolio">
@@ -330,8 +329,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-4.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span> --}}
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span>
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-4.jpg') }}"
                         data-lightbox="portfolio">
@@ -344,8 +343,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-5.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span> --}}
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span>
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-5.jpg') }}"
                         data-lightbox="portfolio">
@@ -358,8 +357,8 @@
                     <img class="img-fluid w-100" src="{{ asset('frontend/img/portfolio-6.jpg') }}" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Project Name</p>
-                        {{-- <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
-                            York, USA</span> --}}
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New
+                            York, USA</span>
                     </a>
                     <a class="portfolio-btn" href="{{ asset('frontend/img/portfolio-6.jpg') }}"
                         data-lightbox="portfolio">
@@ -368,7 +367,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Portfolio End -->
 
 
@@ -466,7 +465,7 @@
 
 
     <!-- Blog Start -->
-    <div class="container-fluid py-6 px-5">
+    {{-- <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">Latest <span class="text-primary">Articles</span> From Our Blog
                 Post</h1>
@@ -478,8 +477,8 @@
                     <div class="p-4">
                         <div class="d-flex justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                {{-- <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.webp') }}"
-                                    width="35" height="35" alt=""> --}}
+                                <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
+                                    width="35" height="35" alt="">
                                 <span>Al Najm Al Saeed</span>
                             </div>
                             <div class="d-flex align-items-center">
@@ -498,8 +497,8 @@
                     <div class="p-4">
                         <div class="d-flex justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                {{-- <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.webp') }}"
-                                    width="35" height="35" alt=""> --}}
+                                <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
+                                    width="35" height="35" alt="">
                                 <span>Al Najm Al Saeed</span>
                             </div>
                             <div class="d-flex align-items-center">
@@ -518,8 +517,8 @@
                     <div class="p-4">
                         <div class="d-flex justify-content-between mb-4">
                             <div class="d-flex align-items-center">
-                                {{-- <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
-                                    width="35" height="35" alt=""> --}}
+                                <img class="rounded-circle me-2" src="{{ asset('frontend/img/user.jpg') }}"
+                                    width="35" height="35" alt="">
                                 <span>Al Najm Al Saeed</span>
                             </div>
                             <div class="d-flex align-items-center">
@@ -527,12 +526,14 @@
                                     2045</span>
                             </div>
                         </div>
-                        <h4 class="text-uppercase mb-3">Elevate Your Space: Essential Interior Design Tips for Modern Living</h4>
+                        <h4 class="text-uppercase mb-3">Elevate Your Space: Essential Interior Design Tips for Modern
+                            Living</h4>
                         <a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Blog End -->
+
 @endsection

@@ -7,13 +7,5 @@ use Illuminate\Http\Request;
 
 class BasicController extends Controller
 {
-    public function about()
-    {
-        return view('site.about');
-    }
-
-    public function service()
-    {
-        return view('site.service');
-    }
+    //
 }
