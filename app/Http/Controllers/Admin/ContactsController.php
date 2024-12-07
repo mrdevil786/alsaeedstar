@@ -10,7 +10,7 @@ class ContactsController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::latest()->get();
         return view('admin.contact.index', compact('contacts'));
     }
 }

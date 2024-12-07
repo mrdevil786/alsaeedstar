@@ -41,7 +41,7 @@
                                 @foreach ($contacts as $contact)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $contact->name }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($contact->name, 20, '...') }}</td>
                                         <td>{{ $contact->email }}</td>
                                         <td>{{ \Illuminate\Support\Str::limit($contact->subject, 20, '...') }}</td>
                                         <td>{{ \Illuminate\Support\Str::limit($contact->message, 20, '...') }}</td>
