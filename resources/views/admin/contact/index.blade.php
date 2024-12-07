@@ -43,8 +43,8 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $contact->name }}</td>
                                         <td>{{ $contact->email }}</td>
-                                        <td>{{ $contact->subject }}</td>
-                                        <td>{{ $contact->message }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($contact->subject, 20, '...') }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($contact->message, 20, '...') }}</td>
                                         <td>{{ $contact->created_at }}</td>
 
                                         <td class="text-center">

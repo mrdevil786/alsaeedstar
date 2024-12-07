@@ -25,7 +25,7 @@
                     frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             <div class="col-lg-6">
-                <div class="contact-form bg-light p-5">
+                <div class="contact-form bg-light p-3">
                     <div class="row g-3">
                         <div class="col-12 col-sm-6">
                             <input type="text" class="form-control border-0" id="name" placeholder="Your Name"
