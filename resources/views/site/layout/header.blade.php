@@ -32,6 +32,16 @@
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P94NV8JDP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P94NV8JDP2');
+</script>
+
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid px-5 d-none d-lg-block">
