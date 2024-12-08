@@ -68,7 +68,10 @@
 
         @if ($jobOpenings->isEmpty())
             <div class="text-center">
-                <h4 class="text-muted">Currently, there are no job openings available. Please check back later.</h4>
+                <h4 class="text-muted">
+                    <i class="fa fa-exclamation-triangle text-warning me-2"></i>
+                    Currently, there are no job openings available. Please check back later.
+                </h4>
             </div>
         @else
             <div class="row g-5">
