@@ -54,7 +54,7 @@
             <form action="{{ route('frontend.career-apply', ['job' => $job->id]) }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="job_id" value="{{ $job->id }}">
+                <input type="hidden" name="job_opening_id" value="{{ $job->id }}">
 
                 <div class="row g-3">
                     <div class="col-12 col-sm-6">

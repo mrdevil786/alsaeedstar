@@ -30,13 +30,13 @@ class CareerController extends Controller
             'phone' => 'required|string|max:15',
             'message' => 'nullable|string',
             'resume' => 'required|file|mimes:pdf,doc,docx|max:2048',
-            'job_id' => 'required|exists:job_openings,id',
+            'job_opening_id' => 'required|exists:job_openings,id',
         ]);
 
         $resumePath = FileUploader::uploadFile($request->file('resume'), 'files/resumes');
 
         JobApplication::create([
-            'job_id' => $request->job_id,
+            'job_opening_id' => $request->job_opening_id,
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
@@ -44,6 +44,6 @@ class CareerController extends Controller
             'resume' => $resumePath,
         ]);
 
-        return redirect()->route('careers')->with('success', 'Application submitted successfully.');
+        return redirect()->route('frontend.career')->with('success', 'Application submitted successfully.');
     }
 }
