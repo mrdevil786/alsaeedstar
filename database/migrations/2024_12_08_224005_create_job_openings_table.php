@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('location');
             $table->enum('type', ['full-time', 'part-time', 'contract']);
+            $table->enum('status', ['active', 'blocked'])->default('active');
             $table->timestamps();
         });
     }
