@@ -65,20 +65,28 @@
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">Explore <span class="text-primary">Job Openings</span></h1>
         </div>
-        <div class="row g-5">
-            @foreach ($jobOpenings as $job)
-                <div class="col-lg-4">
-                    <div class="bg-white border rounded p-4 mb-4">
-                        <h5 class="text-uppercase">{{ $job->title }}</h5>
-                        <p>{{ $job->description }}</p>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $job->location }}</p>
-                        <p class="mb-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $job->type }}</p>
-                        <a class="btn btn-primary" href="{{ route('frontend.career-detail', $job->id) }}">Apply Now</a>
+
+        @if ($jobOpenings->isEmpty())
+            <div class="text-center">
+                <h4 class="text-muted">Currently, there are no job openings available. Please check back later.</h4>
+            </div>
+        @else
+            <div class="row g-5">
+                @foreach ($jobOpenings as $job)
+                    <div class="col-lg-4">
+                        <div class="bg-white border rounded p-4 mb-4">
+                            <h5 class="text-uppercase">{{ $job->title }}</h5>
+                            <p>{{ $job->description }}</p>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $job->location }}</p>
+                            <p class="mb-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $job->type }}</p>
+                            <a class="btn btn-primary" href="{{ route('frontend.career-detail', $job->id) }}">Apply Now</a>
+                        </div>
                     </div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+        @endif
     </div>
     <!-- Job Listings End -->
+
 
 @endsection
