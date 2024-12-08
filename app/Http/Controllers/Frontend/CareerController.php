@@ -12,13 +12,13 @@ class CareerController extends Controller
 {
     public function index()
     {
-        $jobOpenings = JobOpening::all();
+        $jobOpenings = JobOpening::where('status', 'active')->get();
         return view('site.career', compact('jobOpenings'));
     }
 
     public function show($id)
     {
-        $job = JobOpening::findOrFail($id);
+        $job = JobOpening::where('id', $id)->where('status', 'active')->firstOrFail();
         return view('site.career-detail', compact('job'));
     }
 
@@ -32,6 +32,12 @@ class CareerController extends Controller
             'resume' => 'required|file|mimes:pdf,doc,docx|max:2048',
             'job_opening_id' => 'required|exists:job_openings,id',
         ]);
+
+        $jobOpening = JobOpening::where('id', $request->job_opening_id)->where('status', 'active')->first();
+
+        if (!$jobOpening) {
+            return redirect()->route('frontend.career')->with('error', 'This job opening is no longer available.');
+        }
 
         $resumePath = FileUploader::uploadFile($request->file('resume'), 'files/resumes');
 
