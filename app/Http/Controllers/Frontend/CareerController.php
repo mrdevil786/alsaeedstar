@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Helpers\FileUploader;
 use App\Http\Controllers\Controller;
 use App\Models\JobApplication;
 use App\Models\JobOpening;
@@ -32,13 +33,15 @@ class CareerController extends Controller
             'job_id' => 'required|exists:job_openings,id',
         ]);
 
+        $resumePath = FileUploader::uploadFile($request->file('resume'), 'files/resumes');
+
         JobApplication::create([
             'job_id' => $request->job_id,
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'message' => $request->message,
-            'resume' => $request->file('resume')->store('resumes', 'public'),
+            'resume' => $resumePath,
         ]);
 
         return redirect()->route('careers')->with('success', 'Application submitted successfully.');
