@@ -33,14 +33,14 @@
 </head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P94NV8JDP2"></script>
+{{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-P94NV8JDP2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-P94NV8JDP2');
-</script>
+</script> --}}
 
 <body>
     <!-- Topbar Start -->
@@ -95,6 +95,7 @@
                     <a href="{{ route('frontend.home') }}" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
                     <a href="{{ route('frontend.about') }}" class="nav-item nav-link @yield('frontend-about-section')">About</a>
                     <a href="{{ route('frontend.service') }}" class="nav-item nav-link @yield('frontend-service-section')">Service</a>
+                    <a href="{{ route('frontend.career') }}" class="nav-item nav-link @yield('frontend-career-section')">Career</a>
                     {{-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
