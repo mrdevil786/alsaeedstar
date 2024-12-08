@@ -12,7 +12,7 @@ class CareerController extends Controller
 {
     public function index()
     {
-        $jobOpenings = JobOpening::where('status', 'active')->get();
+        $jobOpenings = JobOpening::where('status', 'active')->latest()->get();
         return view('site.career', compact('jobOpenings'));
     }
 

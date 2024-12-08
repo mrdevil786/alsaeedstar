@@ -41,6 +41,16 @@ return [
             ],
         ],
     ],
+    'careers' => [
+        'items' => [
+            [
+                'label' => 'Careers',
+                'icon' => 'fe fe-briefcase',
+                'route' => 'admin.careers.index',
+                'active' => 'admin/careers*',
+            ],
+        ],
+    ],
     'tools' => [
         'title' => 'Tools & Management',
         'items' => [
