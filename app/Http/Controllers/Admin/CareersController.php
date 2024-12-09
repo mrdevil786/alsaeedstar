@@ -15,12 +15,6 @@ class CareersController extends Controller
         return view('admin.career.index', compact('jobOpenings'));
     }
 
-    // CREATE PAGE FOR A SPECIFIC JOB OPENING
-    // public function create()
-    // {
-    //     return view('admin.career.create');
-    // }
-
     // VALIDATE AND STORE A NEW JOB OPENING
     public function store(Request $request)
     {
