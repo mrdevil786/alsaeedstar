@@ -60,7 +60,6 @@ class CareersController extends Controller
             'description' => 'required|string',
             'location' => 'required|string',
             'type' => 'required|in:full-time,part-time,contract',
-            'status' => 'required|in:active,blocked',
         ]);
 
         $career = JobOpening::findOrFail($request->id);
@@ -69,7 +68,6 @@ class CareersController extends Controller
         $career->description = $request->description;
         $career->location = $request->location;
         $career->type = $request->type;
-        $career->status = $request->status;
 
         $career->save();
 
