@@ -16,10 +16,10 @@ class CareersController extends Controller
     }
 
     // CREATE PAGE FOR A SPECIFIC JOB OPENING
-    public function create()
-    {
-        return view('admin.career.create');
-    }
+    // public function create()
+    // {
+    //     return view('admin.career.create');
+    // }
 
     // VALIDATE AND STORE A NEW JOB OPENING
     public function store(Request $request)
@@ -47,7 +47,7 @@ class CareersController extends Controller
     {
         $career = JobOpening::findOrFail($id);
         $isEdit = true;
-        return view('admin.career.edit', compact('career', 'isEdit'));
+        return view('admin.career.view-edit', compact('career', 'isEdit'));
     }
 
     // VIEW A SPECIFIC JOB OPENING
@@ -55,7 +55,7 @@ class CareersController extends Controller
     {
         $career = JobOpening::findOrFail($id);
         $isEdit = false;
-        return view('admin.career.edit', compact('career', 'isEdit'));
+        return view('admin.career.view-edit', compact('career', 'isEdit'));
     }
 
     // UPDATE A JOB OPENING'S DETAILS
@@ -79,14 +79,14 @@ class CareersController extends Controller
 
         $career->save();
 
-        return redirect()->route('admin.career.index')->with('success', 'Job opening updated successfully!');
+        return redirect()->route('admin.careers.index')->with('success', 'Job opening updated successfully!');
     }
 
     // UPDATE JOB OPENING STATUS (ACTIVE OR BLOCKED)
     public function status(Request $request)
     {
         $request->validate([
-            'id' => 'required|numeric|exists:careers,id',
+            'id' => 'required|numeric|exists:job_openings,id',
             'status' => 'required|in:active,blocked',
         ]);
 
@@ -103,6 +103,6 @@ class CareersController extends Controller
         $career = JobOpening::findOrFail($id);
         $career->delete();
 
-        return redirect()->route('admin.career.index')->with('success', 'Job opening deleted successfully!');
+        return redirect()->route('admin.careers.index')->with('success', 'Job opening deleted successfully!');
     }
 }

@@ -33,7 +33,9 @@
                                     <th class="wd-20p border-bottom-0">Description</th>
                                     <th class="wd-15p border-bottom-0">Location</th>
                                     <th class="wd-15p border-bottom-0">Type</th>
-                                    <th class="wd-15p border-bottom-0">Status</th>
+                                    @if (auth()->user()->user_role == 1)
+                                        <th class="wd-25p border-bottom-0">Status</th>
+                                    @endif
                                     <th class="wd-25p border-bottom-0">Action</th>
                                 </tr>
                             </thead>
@@ -45,12 +47,16 @@
                                         <td>{{ \Illuminate\Support\Str::limit($jobOpening->description, 30, '...') }}</td>
                                         <td>{{ $jobOpening->location }}</td>
                                         <td>{{ ucfirst($jobOpening->type) }}</td>
-                                        <td>
-                                            <span
-                                                class="badge badge-{{ $jobOpening->status == 'active' ? 'success' : 'danger' }}">
-                                                {{ ucfirst($jobOpening->status) }}
-                                            </span>
-                                        </td>
+                                        @if (auth()->user()->user_role == 1)
+                                            <td class="text-center">
+                                                <label class="custom-switch form-switch mb-0">
+                                                    <input type="checkbox" name="custom-switch-radio"
+                                                        class="custom-switch-input" data-career-id="{{ $jobOpening->id }}"
+                                                        {{ $jobOpening->status == 'active' ? 'checked' : '' }}>
+                                                    <span class="custom-switch-indicator"></span>
+                                                </label>
+                                            </td>
+                                        @endif
                                         <td class="text-center">
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary"
                                                 href="{{ route('admin.careers.view', $jobOpening->id) }}" />
