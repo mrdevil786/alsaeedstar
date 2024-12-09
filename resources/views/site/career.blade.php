@@ -88,7 +88,7 @@
                 </h4>
             </div>
         @else
-            <div class="row g-5">
+            <div class="row g-5 justify-content-center">
                 @foreach ($jobOpenings as $job)
                     <div class="col-lg-4">
                         <div class="bg-white border rounded p-4 mb-4">
