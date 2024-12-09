@@ -96,11 +96,12 @@
                                 style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
                                 {{ $job->title }}</h5>
                             <p
-                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
                                 {{ $job->description }}
                             </p>
                             <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $job->location }}</p>
-                            <p class="mb-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $job->type }}</p>
+                            <p class="mb-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ ucfirst($job->type) }}
+                            </p>
                             <div class="text-center"><a class="btn btn-primary"
                                     href="{{ route('frontend.career-detail', $job->id) }}">Apply Now</a></div>
                         </div>

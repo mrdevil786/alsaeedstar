@@ -1,6 +1,6 @@
 @extends('site.layout.main')
 
-@section('frontend-title-section', 'Careers')
+@section('frontend-title-section', $job->title)
 @section('frontend-career-section', 'active')
 
 @section('frontend-main-section')
@@ -21,24 +21,36 @@
         <div class="row g-5">
             <div class="col-lg-12">
 
+                <div class="text-center">
+                    <h1 class="display-5 text-uppercase mb-4">Job <span class="text-primary">Details</span>
+                    </h1>
+                </div>
+
                 <!-- Location and Type Details -->
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <p class="h5 text-muted"><i class="fa fa-user-tie text-primary me-2"></i><strong>Position:</strong>
-                            {{ $job->title }}</p>
+                        <p class="h5">
+                            <i class="fa fa-user-tie text-primary me-2"></i><strong>Position:</strong>
+                            <span class="text-muted">{{ $job->title }}</span>
+                        </p>
                     </div>
                     <div class="col-12 mb-3">
-                        <p class="h5 text-muted"><i class="fa fa-info-circle text-primary me-2"></i><strong>Job
-                                Description:</strong> {{ $job->description }}</p>
+                        <p class="h5">
+                            <i class="fa fa-info-circle text-primary me-2"></i><strong>Job Description:</strong>
+                            <span class="text-muted">{{ $job->description }}</span>
+                        </p>
                     </div>
                     <div class="col-12 mb-3">
-                        <p class="h5 text-muted"><i
-                                class="fa fa-map-marker-alt text-primary me-2"></i><strong>Location:</strong>
-                            {{ $job->location }}</p>
+                        <p class="h5">
+                            <i class="fa fa-map-marker-alt text-primary me-2"></i><strong>Location:</strong>
+                            <span class="text-muted">{{ $job->location }}</span>
+                        </p>
                     </div>
                     <div class="col-12 mb-3">
-                        <p class="h5 text-muted"><i class="fa fa-briefcase text-primary me-2"></i><strong>Job Type:</strong>
-                            {{ $job->type }}</p>
+                        <p class="h5">
+                            <i class="fa fa-briefcase text-primary me-2"></i><strong>Job Type:</strong>
+                            <span class="text-muted">{{ ucfirst($job->type) }}</span>
+                        </p>
                     </div>
                 </div>
             </div>

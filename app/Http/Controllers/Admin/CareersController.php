@@ -29,7 +29,6 @@ class CareersController extends Controller
             'description' => 'required|string',
             'location' => 'required|string',
             'type' => 'required|in:full-time,part-time,contract',
-            'status' => 'required|in:active,blocked',
         ]);
 
         $career = new JobOpening();
@@ -37,11 +36,10 @@ class CareersController extends Controller
         $career->description = $request->description;
         $career->location = $request->location;
         $career->type = $request->type;
-        $career->status = $request->status;
 
         $career->save();
 
-        return redirect()->route('admin.career.index')->with('success', 'Job opening created successfully!');
+        return redirect()->route('admin.careers.index')->with('success', 'Job opening created successfully!');
     }
 
     // FIND A SPECIFIC JOB OPENING AND SHOW THE EDIT FORM

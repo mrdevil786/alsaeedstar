@@ -8,6 +8,10 @@
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="page-title">Manage Career Openings</h1>
+            @if (auth()->user()->user_role == 1)
+                <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Job</button>
+            @endif
         </div>
     </div>
     <!-- PAGE-HEADER END -->
@@ -76,13 +80,12 @@
     <!-- End Row -->
 
     <!-- Add Modal - Right Offcanvas -->
-    {{-- <x-modal.right-offcanvas title="Add New Job Opening" action="{{ route('admin.careers.store') }}" method="POST">
+    <x-modal.right-offcanvas title="Add New Job Opening" action="{{ route('admin.careers.store') }}" method="POST">
         <x-fields.input-field label="Job Title" name="title" />
-        <x-fields.textarea-field label="Description" name="description" />
+        <x-fields.input-field label="Description" name="description" />
         <x-fields.input-field label="Location" name="location" />
-        <x-fields.select-field label="Job Type" name="type" :options="['full-time', 'part-time', 'contract']" />
-        <x-fields.select-field label="Status" name="status" :options="['active', 'blocked']" />
-    </x-modal.right-offcanvas> --}}
+        <x-fields.dropdown-field label="Job Type" name="type" :options="['full-time' => 'Full-Time', 'part-time' => 'Part-Time', 'contract' => 'Contract']" />
+    </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
 
 @endsection
