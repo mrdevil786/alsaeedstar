@@ -88,7 +88,16 @@
     <!-- Add Modal - Right Offcanvas -->
     <x-modal.right-offcanvas title="Add New Job Opening" action="{{ route('admin.careers.store') }}" method="POST">
         <x-fields.input-field label="Job Title" name="title" />
-        <x-fields.input-field label="Description" name="description" />
+
+        <div class="col-xl-12 mb-3">
+            <label class="form-label mt-0" for="description">Description</label>
+            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"
+                placeholder="Enter job description">{{ old('description') }}</textarea>
+            @error('description')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
         <x-fields.input-field label="Location" name="location" />
         <x-fields.dropdown-field label="Job Type" name="type" :options="['full-time' => 'Full-Time', 'part-time' => 'Part-Time', 'contract' => 'Contract']" />
     </x-modal.right-offcanvas>
