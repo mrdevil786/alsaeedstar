@@ -55,7 +55,7 @@ return [
         'items' => [
             [
                 'label' => 'Applications',
-                'icon' => 'fe fe-briefcase',
+                'icon' => 'fe fe-file-text',
                 'route' => 'admin.applications.index',
                 'active' => 'admin/applications*',
             ],
