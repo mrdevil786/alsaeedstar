@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ApplicationsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Admin\AuthController;
@@ -21,6 +22,27 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
 
     Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
+
+    // Applications management routes
+    Route::prefix('applications')->name('applications.')->controller(ApplicationsController::class)->group(function () {
+
+        Route::middleware('admin')->group(function () {
+            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::put('status', 'status')->name('status');
+            Route::post('create', 'create')->name('create');
+        });
+
+        Route::middleware('manager')->group(function () {
+            Route::post('store', 'store')->name('store');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::put('update/{id}', 'update')->name('update');
+        });
+
+        Route::middleware('member')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'view')->name('view');
+        });
+    });
 
     // Career management routes
     Route::prefix('careers')->name('careers.')->controller(CareersController::class)->group(function () {

@@ -51,6 +51,16 @@ return [
             ],
         ],
     ],
+    'applications' => [
+        'items' => [
+            [
+                'label' => 'Applications',
+                'icon' => 'fe fe-briefcase',
+                'route' => 'admin.applications.index',
+                'active' => 'admin/applications*',
+            ],
+        ],
+    ],
     'tools' => [
         'title' => 'Tools & Management',
         'items' => [

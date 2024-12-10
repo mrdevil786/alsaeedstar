@@ -5,17 +5,6 @@
 
 @section('frontend-main-section')
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header">
-        <h1 class="display-3 text-uppercase text-white mb-3">Careers</h1>
-        <div class="d-inline-flex text-white">
-            <h6 class="text-uppercase m-0"><a href="">Home</a></h6>
-            <h6 class="text-white m-0 px-3">/</h6>
-            <h6 class="text-uppercase text-white m-0">Careers</h6>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
     <!-- Success and Error Messages -->
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -30,6 +19,18 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Careers</h1>
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0"><a href="">Home</a></h6>
+            <h6 class="text-white m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-white m-0">Careers</h6>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
 
     <!-- Career Opportunities Start -->
     <div class="container-fluid py-6 px-5">
