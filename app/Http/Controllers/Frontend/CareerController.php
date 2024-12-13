@@ -25,11 +25,11 @@ class CareerController extends Controller
     public function apply(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'name' => 'required|string|max:100',
+            'email' => 'required|email|unique:job_applications,email|max:255',
             'phone' => 'required|string|max:15',
-            'message' => 'nullable|string',
-            'resume' => 'required|file|mimes:pdf,doc,docx|max:2048',
+            'message' => 'nullable|string|max:500',
+            'resume' => 'required|file|mimes:pdf,doc,docx|max:1024',
             'job_opening_id' => 'required|exists:job_openings,id',
         ]);
 

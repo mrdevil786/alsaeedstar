@@ -5,17 +5,6 @@
 
 @section('frontend-main-section')
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header">
-        <h1 class="display-3 text-uppercase text-white mb-3">Careers</h1>
-        <div class="d-inline-flex text-white">
-            <h6 class="text-uppercase m-0"><a href="">Home</a></h6>
-            <h6 class="text-white m-0 px-3">/</h6>
-            <h6 class="text-uppercase text-white m-0">Careers</h6>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
     <!-- Success and Error Messages -->
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -30,6 +19,18 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Careers</h1>
+        <div class="d-inline-flex text-white">
+            <h6 class="text-uppercase m-0"><a href="">Home</a></h6>
+            <h6 class="text-white m-0 px-3">/</h6>
+            <h6 class="text-uppercase text-white m-0">Careers</h6>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
 
     <!-- Career Opportunities Start -->
     <div class="container-fluid py-6 px-5">
@@ -88,7 +89,7 @@
                 </h4>
             </div>
         @else
-            <div class="row g-5">
+            <div class="row g-5 justify-content-center">
                 @foreach ($jobOpenings as $job)
                     <div class="col-lg-4">
                         <div class="bg-white border rounded p-4 mb-4">
@@ -96,11 +97,12 @@
                                 style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
                                 {{ $job->title }}</h5>
                             <p
-                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
                                 {{ $job->description }}
                             </p>
                             <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $job->location }}</p>
-                            <p class="mb-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ $job->type }}</p>
+                            <p class="mb-2"><i class="fa fa-calendar-alt text-primary me-2"></i>{{ ucfirst($job->type) }}
+                            </p>
                             <div class="text-center"><a class="btn btn-primary"
                                     href="{{ route('frontend.career-detail', $job->id) }}">Apply Now</a></div>
                         </div>

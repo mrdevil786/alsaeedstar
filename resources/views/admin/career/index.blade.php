@@ -7,7 +7,11 @@
     <!-- PAGE-HEADER -->
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
-            <h1 class="page-title">Manage Career Openings</h1>
+            <h1 class="page-title">Manage Job Openings</h1>
+            @if (auth()->user()->user_role == 1)
+                <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Job</button>
+            @endif
         </div>
     </div>
     <!-- PAGE-HEADER END -->
@@ -29,7 +33,9 @@
                                     <th class="wd-20p border-bottom-0">Description</th>
                                     <th class="wd-15p border-bottom-0">Location</th>
                                     <th class="wd-15p border-bottom-0">Type</th>
-                                    <th class="wd-15p border-bottom-0">Status</th>
+                                    @if (auth()->user()->user_role == 1)
+                                        <th class="wd-25p border-bottom-0">Status</th>
+                                    @endif
                                     <th class="wd-25p border-bottom-0">Action</th>
                                 </tr>
                             </thead>
@@ -41,12 +47,16 @@
                                         <td>{{ \Illuminate\Support\Str::limit($jobOpening->description, 30, '...') }}</td>
                                         <td>{{ $jobOpening->location }}</td>
                                         <td>{{ ucfirst($jobOpening->type) }}</td>
-                                        <td>
-                                            <span
-                                                class="badge badge-{{ $jobOpening->status == 'active' ? 'success' : 'danger' }}">
-                                                {{ ucfirst($jobOpening->status) }}
-                                            </span>
-                                        </td>
+                                        @if (auth()->user()->user_role == 1)
+                                            <td class="text-center">
+                                                <label class="custom-switch form-switch mb-0">
+                                                    <input type="checkbox" name="custom-switch-radio"
+                                                        class="custom-switch-input" data-career-id="{{ $jobOpening->id }}"
+                                                        {{ $jobOpening->status == 'active' ? 'checked' : '' }}>
+                                                    <span class="custom-switch-indicator"></span>
+                                                </label>
+                                            </td>
+                                        @endif
                                         <td class="text-center">
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary"
                                                 href="{{ route('admin.careers.view', $jobOpening->id) }}" />
@@ -76,13 +86,21 @@
     <!-- End Row -->
 
     <!-- Add Modal - Right Offcanvas -->
-    {{-- <x-modal.right-offcanvas title="Add New Job Opening" action="{{ route('admin.careers.store') }}" method="POST">
+    <x-modal.right-offcanvas title="Add New Job Opening" action="{{ route('admin.careers.store') }}" method="POST">
         <x-fields.input-field label="Job Title" name="title" />
-        <x-fields.textarea-field label="Description" name="description" />
+
+        <div class="col-xl-12 mb-3">
+            <label class="form-label mt-0" for="description">Description</label>
+            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"
+                placeholder="Enter job description">{{ old('description') }}</textarea>
+            @error('description')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
         <x-fields.input-field label="Location" name="location" />
-        <x-fields.select-field label="Job Type" name="type" :options="['full-time', 'part-time', 'contract']" />
-        <x-fields.select-field label="Status" name="status" :options="['active', 'blocked']" />
-    </x-modal.right-offcanvas> --}}
+        <x-fields.dropdown-field label="Job Type" name="type" :options="['full-time' => 'Full-Time', 'part-time' => 'Part-Time', 'contract' => 'Contract']" />
+    </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
 
 @endsection
