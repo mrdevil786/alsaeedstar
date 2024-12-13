@@ -37,7 +37,7 @@
             <div class="col-lg-7">
                 <h1 class="display-5 text-uppercase mb-4">Join Our <span class="text-primary">Dynamic Team</span></h1>
                 <h4 class="text-uppercase mb-3 text-body">Empowering Talent, Building Futures</h4>
-                <p>At Al Saeed Star Co. Ltd., we believe that our people are our greatest asset. We are always on the
+                <p>At Al Najm Al Saeed Co. Ltd., we believe that our people are our greatest asset. We are always on the
                     lookout for passionate and talented individuals to join our team and help us deliver excellence in
                     construction,
                     maintenance, HVAC, and IT solutions. If you are looking for a career that challenges, inspires, and

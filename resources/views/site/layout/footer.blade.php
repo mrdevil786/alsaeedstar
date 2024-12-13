@@ -6,7 +6,7 @@
                 <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt=""
                     class="header-brand-img">
             </a>
-            <p>Welcome to Al Saeed Star Co. Ltd., where innovation drives excellence in construction, HVAC, IT services,
+            <p>Welcome to Al Najm Al Saeed Co. Ltd., where innovation drives excellence in construction, HVAC, IT services,
                 and maintenance. Our expert team delivers precise, tailored solutions to meet your needs with unmatched
                 expertise.</p>
             <p><a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank"><i

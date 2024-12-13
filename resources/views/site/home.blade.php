@@ -51,7 +51,7 @@
                 <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Experts</span> in
                     Construction, Maintenance, HVAC, and IT Solutions</h1>
                 <h4 class="text-uppercase mb-3 text-body">Innovative Solutions for a Diverse Range of Needs</h4>
-                <p>At Al Saeed Star Co. Ltd., we excel in delivering top-tier construction and maintenance services,
+                <p>At Al Najm Al Saeed Co. Ltd., we excel in delivering top-tier construction and maintenance services,
                     alongside advanced HVAC and IT solutions. Our dedication to quality and innovation ensures that we
                     provide tailored, comprehensive solutions that address the unique requirements of each client. From
                     creating robust structures to maintaining them with precision, and optimizing your HVAC and IT systems,
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <p class="mb-4">Our expertise spans across various sectors, ensuring that we meet the evolving needs of
-                    our clients with precision and excellence. Al Saeed Star Co. Ltd. is your trusted partner for
+                    our clients with precision and excellence. Al Najm Al Saeed Co. Ltd. is your trusted partner for
                     high-quality, reliable, and efficient services that drive success and sustainability in every project we
                     undertake.</p>
                 <img src="{{ asset('frontend/img/signature.png') }}" alt="Signature">
