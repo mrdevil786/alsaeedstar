@@ -10,7 +10,7 @@
                 and maintenance. Our expert team delivers precise, tailored solutions to meet your needs with unmatched
                 expertise.</p>
             <p><a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank"><i
-                        class="fa fa-map-marker-alt me-2"></i>Prince Abdulaziz bin Musaed bin Julawi 12628, Riyadh, Kingdom of Saudi Arabia</a></p>
+                        class="fa fa-map-marker-alt me-2"></i>Prince Abdulaziz bin Musaed bin Julawi 12628, Riyadh, Saudi Arabia</a></p>
             <p><a href="tel:+966536161198"><i class="fa fa-phone-alt me-2"></i>+966 53 616 1198</a></p>
             <p><a href="mailto:info@alsaeedstar.com"><i class="fa fa-envelope me-2"></i>info@alsaeedstar.com</a></p>
             <div class="d-flex justify-content-start mt-4">
