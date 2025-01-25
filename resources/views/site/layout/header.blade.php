@@ -85,7 +85,7 @@
     <div class="container-fluid sticky-top bg-light bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-light bg-light-radial navbar-light py-3 py-lg-0">
             <a href="{{ route('frontend.home') }}" class="navbar-brand d-flex align-items-center">
-                <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt=""
+                <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt=""
                     class="header-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
