@@ -72,7 +72,7 @@
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Call Us</h6>
-                        <a href="tel:+966536161198">+966 53 616 1198</a>
+                        <a href="tel:+966536161198">+966 (53) 616-1198</a>
                     </div>
                 </div>
             </div>
