@@ -54,7 +54,7 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
-                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank">Prince Abdulaziz bin Musaed bin Julawi 12628, Saudi Arabia</a>
+                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank">Prince Abdulaziz bin Musaed bin Julawi 12628</a>
                     </div>
                 </div>
             </div>
