@@ -4,7 +4,6 @@ namespace App\Helpers;
 
 use Exception;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class FileUploader
@@ -27,7 +26,6 @@ class FileUploader
     
             return 'storage/' . $targetPath . '/' . $fileName;
         } catch (Exception $e) {
-            Log::error('Exception in file upload: ' . $e->getMessage());
             throw new Exception("Failed to upload file: " . $e->getMessage());
         }
     }    
