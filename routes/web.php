@@ -70,7 +70,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
 
         // Routes for admins
         Route::middleware('admin')->group(function () {
-            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::delete('/{id}', 'destroy')->name('destroy');
             Route::put('status', 'status')->name('status');
             Route::post('create', 'create')->name('create');
         });

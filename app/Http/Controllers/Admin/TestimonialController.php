@@ -87,4 +87,13 @@ class TestimonialController extends Controller
 
         return response()->json(['message' => 'Testimonial status updated successfully']);
     }
+
+    // DELETE A TESTIMONIAL
+    public function destroy($id)
+    {
+        $testimonial = Testimonial::findOrFail($id);
+        $testimonial->delete();
+
+        return redirect()->route('admin.testimonials.index')->with('success', 'Testimonial deleted successfully!');
+    }
 }
