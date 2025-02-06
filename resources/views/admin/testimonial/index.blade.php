@@ -47,8 +47,7 @@
                                                 class="avatar avatar-sm br-7" src="{{ asset($testimonial->avatar) }}"></td>
                                         <td>{{ $testimonial->name }}</td>
                                         <td>{{ $testimonial->title }}</td>
-                                        <td>{{ $testimonial->description }}</td>
-
+                                        <td>{{ \Illuminate\Support\Str::limit($testimonial->description, 30, '...') }}</td>
                                         @if (auth()->user()->user_role == 1)
                                             <td class="text-center">
                                                 <label class="custom-switch form-switch mb-0">

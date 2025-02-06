@@ -439,9 +439,9 @@
                     <img class="img-fluid w-100 h-100" src="{{ asset('frontend/img/testimonial.jpg') }}">
                 </div>
                 <div class="col-xl-8 col-lg-7 col-md-12">
-                    @foreach ($testimonials as $testimonial)
-                        <div class="testimonial bg-light">
-                            <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial bg-light">
+                        <div class="owl-carousel testimonial-carousel">
+                            @foreach ($testimonials as $testimonial)
                                 <div class="row gx-4 align-items-center">
                                     <div class="col-xl-4 col-lg-5 col-md-5">
                                         <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
@@ -454,9 +454,9 @@
                                             {{ $testimonial->description }}</p>
                                     </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                    @endforeach
+                    </div>
                 </div>
             </div>
         </div>
