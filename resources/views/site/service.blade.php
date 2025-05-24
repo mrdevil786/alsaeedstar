@@ -35,7 +35,7 @@
                         <div class="px-4 pb-4">
                             <h4 class="text-uppercase mb-3">{{ $service->title }}</h4>
                             <p>{{ $service->description }}</p>
-                            <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                            {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
                         </div>
                     </div>
                 </div>
