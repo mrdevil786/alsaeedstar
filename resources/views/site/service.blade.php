@@ -35,7 +35,7 @@
                         <h4 class="text-uppercase mb-3">HVAC Systems</h4>
                         <p>Providing expert HVAC solutions for residential and commercial spaces, focusing on efficient air
                             conditioning, heating, and ventilation systems to ensure optimal indoor climate control.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         <p>Delivering comprehensive building construction services, from initial planning to final finishes,
                             ensuring quality, safety, and durability for residential, commercial, and industrial projects.
                         </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                         <p>Creating unique, functional interior spaces that reflect client personalities and needs,
                             combining aesthetic appeal with practical design for residential and commercial environments.
                         </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                         <p>Specializing in electro-mechanical installations, including electrical and plumbing systems,
                             providing reliable, safe, and efficient solutions for diverse residential and commercial needs.
                         </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         <h4 class="text-uppercase mb-3">Shades</h4>
                         <p>Offering innovative shading solutions, from retractable awnings to custom shade structures,
                             designed to enhance outdoor comfort and protect against harsh weather conditions.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                         <h4 class="text-uppercase mb-3">Website Development</h4>
                         <p>Crafting user-friendly, modern websites with responsive design, tailored functionality, and SEO
                             optimization, aimed at enhancing client visibility and engagement online.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

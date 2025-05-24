@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProfilesController;
 use App\Http\Controllers\Admin\TeamsController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\ServiceController;
 
 // Guest routes
 Route::prefix('admin')->name('admin.')->middleware('guest')->group(function () {
@@ -168,6 +169,29 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
             Route::get('view/{id}', 'view')->name('view');
             Route::post('update', 'updateProfile')->name('update');
             Route::post('update-password', 'updatePassword')->name('update.password');
+        });
+    });
+
+    // Service routes
+    Route::prefix('services')->name('services.')->controller(ServiceController::class)->group(function () {
+        // Routes for admins
+        Route::middleware('admin')->group(function () {
+            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::put('status', 'status')->name('status');
+            Route::post('create', 'create')->name('create');
+        });
+
+        // Routes for managers
+        Route::middleware('manager')->group(function () {
+            Route::post('store', 'store')->name('store');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::put('update/{id}', 'update')->name('update');
+        });
+
+        // Routes for members
+        Route::middleware('member')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'view')->name('view');
         });
     });
 });

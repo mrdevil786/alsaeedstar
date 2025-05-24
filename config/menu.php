@@ -11,6 +11,16 @@ return [
             ],
         ],
     ],
+    'services' => [
+        'items' => [
+            [
+                'label' => 'Services',
+                'icon' => 'fe fe-layers',
+                'route' => 'admin.services.index',
+                'active' => 'admin/services*',
+            ],
+        ],
+    ],
     'contacts' => [
         'items' => [
             [
