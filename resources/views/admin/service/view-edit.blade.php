@@ -1,12 +1,12 @@
 @extends('admin.layout.main')
 
-@section('admin-page-title', $isEdit ? 'Edit Service' : 'Service Details')
+@section('admin-page-title', $isEdit ? 'Edit Service' : 'View Service')
 
 @section('admin-main-section')
     <!-- PAGE-HEADER -->
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
-            <h1 class="page-title">{{ $isEdit ? 'Edit Service' : $service->title }}</h1>
+            <h1 class="page-title">{{ $isEdit ? 'Edit Service' : 'View Service' }}</h1>
             <div>
                 <a href="{{ route('admin.services.index') }}" class="btn btn-secondary">
                     <i class="fa fa-arrow-left me-2"></i>Back to Services
