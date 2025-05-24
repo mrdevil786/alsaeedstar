@@ -11,8 +11,8 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        $services = Service::where('status', 'active')->get();
-        $testimonials = Testimonial::where('status', 'active')->get();
+        $services = Service::where('status', 'active')->latest()->get();
+        $testimonials = Testimonial::where('status', 'active')->latest()->get();
         return view('site.service', compact('services', 'testimonials'));
     }
 }
