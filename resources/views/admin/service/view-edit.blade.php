@@ -38,6 +38,11 @@
                                 </div>
                                 
                                 <div class="mb-4">
+                                    <h5 class="fw-semibold">Icon</h5>
+                                    <p>{{ $service->icon }}</p>
+                                </div>
+                                
+                                <div class="mb-4">
                                     <h5 class="fw-semibold">Description</h5>
                                     <p>{{ $service->description }}</p>
                                 </div>
@@ -89,6 +94,17 @@
                                         <input type="text" class="form-control @error('title') is-invalid @enderror" 
                                             id="title" name="title" value="{{ old('title', $service->title) }}" required>
                                         @error('title')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    
+                                    <div class="form-group mb-3">
+                                        <label class="form-label" for="icon">Icon (FontAwesome Class)</label>
+                                        <input type="text" class="form-control @error('icon') is-invalid @enderror" 
+                                            id="icon" name="icon" value="{{ old('icon', $service->icon) }}" 
+                                            placeholder="fas fa-cog" required>
+                                        <small class="form-text text-muted">Example: fas fa-cog, far fa-building, fab fa-github</small>
+                                        @error('icon')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
