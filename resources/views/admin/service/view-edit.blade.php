@@ -41,21 +41,13 @@
                                     <h5 class="fw-semibold">Description</h5>
                                     <p>{{ $service->description }}</p>
                                 </div>
-                                
-                                <div class="mb-4">
-                                    <h5 class="fw-semibold">Icon</h5>
-                                    <div>
-                                        <i class="{{ $service->icon }} fa-2x"></i>
-                                        <span class="ms-2">{{ $service->icon }}</span>
-                                    </div>
-                                </div>
                             </div>
                             
                             <div class="col-md-4">
                                 <div class="text-center">
                                     <h5 class="fw-semibold mb-3">Service Image</h5>
-                                    <img src="{{ Storage::url($service->image) }}" alt="{{ $service->title }}" 
-                                        class="img-fluid rounded shadow-sm" style="max-height: 300px;">
+                                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" 
+                                        class="img-fluid shadow-sm" style="max-height: 300px; border-radius: 10px;">
                                 </div>
                             </div>
                         </div>
@@ -107,20 +99,6 @@
                                             id="description" name="description" rows="5" required>{{ old('description', $service->description) }}</textarea>
                                         @error('description')
                                             <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                    </div>
-                                    
-                                    <div class="form-group mb-3">
-                                        <label class="form-label" for="icon">Icon (FontAwesome Class)</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text"><i class="{{ $service->icon }}"></i></span>
-                                            <input type="text" class="form-control @error('icon') is-invalid @enderror" 
-                                                id="icon" name="icon" value="{{ old('icon', $service->icon) }}" 
-                                                placeholder="fas fa-cog" required>
-                                        </div>
-                                        <small class="form-text text-muted">Enter a FontAwesome icon class, e.g., "fas fa-cog"</small>
-                                        @error('icon')
-                                            <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
                                     
@@ -199,4 +177,4 @@
             });
         });
     </script>
-@endsection 
+@endsection
