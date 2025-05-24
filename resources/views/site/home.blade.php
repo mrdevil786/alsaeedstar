@@ -96,97 +96,26 @@
                 Services</h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-15.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-wind text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">HVAC Systems</h4>
-                        <p>Providing expert HVAC solutions for residential and commercial spaces, focusing on efficient air
-                            conditioning, heating, and ventilation systems to ensure optimal indoor climate control.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-2.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-building text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Building Construction</h4>
-                        <p>Delivering comprehensive building construction services, from initial planning to final finishes,
-                            ensuring quality, safety, and durability for residential, commercial, and industrial projects.
-                        </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+            @forelse($services as $service)
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                        <img class="img-fluid" src="{{ asset($service->image) }}" alt="{{ $service->title }}">
+                        <div class="service-icon bg-white">
+                            <i class="{{ $service->icon }} text-primary"></i>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h4 class="text-uppercase mb-3">{{ $service->title }}</h4>
+                            <p>{{ $service->description }}</p>
+                            {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-3.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-couch text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Interior Design</h4>
-                        <p>Creating unique, functional interior spaces that reflect client personalities and needs,
-                            combining aesthetic appeal with practical design for residential and commercial environments.
-                        </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
+            @empty
+                <div class="col-12 text-center">
+                    <p class="text-muted">No services available at the moment.</p>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-4.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-tools text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Electro-Mechanical Works</h4>
-                        <p>Specializing in electro-mechanical installations, including electrical and plumbing systems,
-                            providing reliable, safe, and efficient solutions for diverse residential and commercial needs.
-                        </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-18.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-umbrella text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Shades</h4>
-                        <p>Offering innovative shading solutions, from retractable awnings to custom shade structures,
-                            designed to enhance outdoor comfort and protect against harsh weather conditions.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-17.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-laptop-code text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Website Development</h4>
-                        <p>Crafting user-friendly, modern websites with responsive design, tailored functionality, and SEO
-                            optimization, aimed at enhancing client visibility and engagement online.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
-        {{-- <div class="text-center mt-4">
-            <a class="btn btn-primary" href="#">See More <i class="bi bi-arrow-right"></i></a>
-        </div> --}}
     </div>
     <!-- Services End -->
 
