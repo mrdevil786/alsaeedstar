@@ -47,13 +47,13 @@
                                                 class="avatar avatar-sm br-7" src="{{ asset($testimonial->avatar) }}"></td>
                                         <td>{{ $testimonial->name }}</td>
                                         <td>{{ $testimonial->title }}</td>
-                                        <td>{{ $testimonial->description }}</td>
-
+                                        <td>{{ \Illuminate\Support\Str::limit($testimonial->description, 30, '...') }}</td>
                                         @if (auth()->user()->user_role == 1)
                                             <td class="text-center">
                                                 <label class="custom-switch form-switch mb-0">
                                                     <input type="checkbox" name="custom-switch-radio"
-                                                        class="custom-switch-input" data-testimonial-id="{{ $testimonial->id }}"
+                                                        class="custom-switch-input"
+                                                        data-testimonial-id="{{ $testimonial->id }}"
                                                         {{ $testimonial->status == 'active' ? 'checked' : '' }}>
                                                     <span class="custom-switch-indicator"></span>
                                                 </label>
@@ -70,9 +70,13 @@
                                                     modalTarget="editUserModal" />
                                             @endif
                                             @if (auth()->user()->user_role == 1)
-                                                <x-buttons.action-pill-button
-                                                    href="{{ route('admin.testimonials.destroy', $testimonial->id) }}"
-                                                    iconClass="fa fa-trash" iconColor="danger" />
+                                                <form action="{{ route('admin.testimonials.destroy', $testimonial->id) }}"
+                                                    method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <x-buttons.action-pill-button type="submit" iconClass="fa fa-trash"
+                                                        iconColor="danger" />
+                                                </form>
                                             @endif
                                         </td>
                                     </tr>
