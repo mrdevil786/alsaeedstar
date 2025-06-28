@@ -90,7 +90,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-primary">Get Free Quote</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-primary rounded-pill">Get Free Quote</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-danger">Emergency Repair</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-danger rounded-pill">Emergency Repair</a>
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-success">Schedule Maintenance</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-success rounded-pill">Schedule Maintenance</a>
                     </div>
                 </div>
             </div>
@@ -185,7 +185,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-warning">Upgrade Quote</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-warning rounded-pill">Upgrade Quote</a>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <a href="tel:+1234567890" class="btn btn-info">Call Now: (123) 456-7890</a>
+                        <a href="tel:+966536161198" class="btn btn-info rounded-pill">Call Now: (53) 616-1198</a>
                     </div>
                 </div>
             </div>
@@ -399,7 +399,7 @@
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-primary">Book Service</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-primary rounded-pill">Book Service</a>
                     </div>
                 </div>
             </div>
@@ -447,7 +447,7 @@
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-danger">Emergency Repair</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-danger rounded-pill">Emergency Repair</a>
                     </div>
                 </div>
             </div>
@@ -500,13 +500,270 @@
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <a href="{{ route('frontend.contact') }}" class="btn btn-success">Get Quote</a>
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-success rounded-pill">Get Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- AC Services Pricing End -->
+
+    <!-- Detailed AC Parts & Services Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+            <h1 class="display-5 text-uppercase mb-4">AC Parts & <span class="text-primary">Services Pricing</span></h1>
+            <p class="lead">Comprehensive pricing for all AC parts replacement, repairs, and specialized services</p>
+        </div>
+        
+        <!-- Detailed Parts & Services Grid -->
+        <div class="row g-5 mb-5">
+            <!-- Electrical Parts -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white rounded h-100 d-flex flex-column text-center p-4 shadow">
+                    <div class="service-icon bg-warning rounded-circle mb-4 mx-auto"
+                        style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-bolt text-white fa-2x"></i>
+                    </div>
+                    <h4 class="text-uppercase mb-3 text-warning">Electrical Parts</h4>
+                    <div class="flex-grow-1">
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Capacitor Indoor</span>
+                                <strong class="text-warning">SAR 200</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Capacitor Outdoor</span>
+                                <strong class="text-warning">SAR 200</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Replace Sensor</span>
+                                <strong class="text-warning">SAR 120</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Contactor Replaced</span>
+                                <strong class="text-warning">SAR 175</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Change PCB with Remote</span>
+                                <strong class="text-warning">SAR 250</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Non-Inverter PCB Repaired</span>
+                                <strong class="text-warning">SAR 400</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Inverter PCB Repaired</span>
+                                <strong class="text-warning">SAR 600</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-warning rounded-pill">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fans & Motors -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white rounded h-100 d-flex flex-column text-center p-4 shadow">
+                    <div class="service-icon bg-info rounded-circle mb-4 mx-auto"
+                        style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-fan text-white fa-2x"></i>
+                    </div>
+                    <h4 class="text-uppercase mb-3 text-info">Fans & Motors</h4>
+                    <div class="flex-grow-1">
+                        <div class="mb-4">
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Fan Motor Outdoor</span>
+                                    <strong class="text-info">SAR 375</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Blower Motor Replaced</span>
+                                    <strong class="text-info">SAR 275</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-info mb-3">Other Parts</h5>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Blower Replaced</span>
+                                    <strong class="text-info">SAR 275</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>AC Fan Blade</span>
+                                    <strong class="text-info">SAR 285</strong>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Universal Remote</span>
+                                    <strong class="text-info">SAR 50</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-info rounded-pill">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Minor Repairs -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item bg-white rounded h-100 d-flex flex-column text-center p-4 shadow">
+                    <div class="service-icon bg-secondary rounded-circle mb-4 mx-auto"
+                        style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-screwdriver text-white fa-2x"></i>
+                    </div>
+                    <h4 class="text-uppercase mb-3 text-secondary">Minor Repairs</h4>
+                    <div class="flex-grow-1">
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Connector Wires Replaced (1mtr)</span>
+                                <strong class="text-secondary">SAR 100</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Water Leakage Repaired</span>
+                                <strong class="text-secondary">SAR 109</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Adjust Pipe & Tighten Compressor</span>
+                                <strong class="text-secondary">SAR 100</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Adjust Grill Locks</span>
+                                <strong class="text-secondary">SAR 100</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Drain Pipe Adjust</span>
+                                <strong class="text-secondary">SAR 100</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Noise Adjustment in Motor</span>
+                                <strong class="text-secondary">SAR 100</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Insulation Refix</span>
+                                <strong class="text-secondary">SAR 100</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-secondary rounded-pill">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row g-5">
+            <!-- Gas Charging -->
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="service-item bg-white rounded h-100 d-flex flex-column text-center p-4 shadow">
+                    <div class="service-icon bg-primary rounded-circle mb-4 mx-auto"
+                        style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-snowflake text-white fa-2x"></i>
+                    </div>
+                    <h4 class="text-uppercase mb-3 text-primary">Gas Charging</h4>
+                    <div class="flex-grow-1">
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Flair Nut Replaced</span>
+                                <strong class="text-primary">SAR 120</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Service Valve Replaced</span>
+                                <strong class="text-primary">SAR 250</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Gas Charging (R410)</span>
+                                <strong class="text-primary">SAR 250</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Capillary and Filter</span>
+                                <strong class="text-primary">SAR 150</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Copper Cooling Coil</span>
+                                <strong class="text-primary">SAR 500</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Compressor 0.8–1 Ton</span>
+                                <strong class="text-primary">SAR 615</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Compressor 1.5 Ton</span>
+                                <strong class="text-primary">SAR 675</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Compressor 2 Ton</span>
+                                <strong class="text-primary">SAR 700</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Freon Refill</span>
+                                <strong class="text-primary">SAR 250</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Freon Refill + Deep Cleaning</span>
+                                <strong class="text-primary">SAR 250</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-primary rounded-pill">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Packages -->
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="service-item bg-white rounded h-100 d-flex flex-column text-center p-4 shadow">
+                    <div class="service-icon bg-success rounded-circle mb-4 mx-auto"
+                        style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-gift text-white fa-2x"></i>
+                    </div>
+                    <h4 class="text-uppercase mb-3 text-success">Service Packages</h4>
+                    <div class="flex-grow-1">
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>5 AC Deep Cleaning</span>
+                                <strong class="text-success">SAR 299</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>3 AC Deep Cleaning</span>
+                                <strong class="text-success">SAR 199</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>AC Deep Clean (Window/Split)</span>
+                                <strong class="text-success">SAR 129</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Window AC Installation</span>
+                                <strong class="text-success">SAR 109</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Window AC Uninstallation</span>
+                                <strong class="text-success">SAR 109</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Split AC Installation</span>
+                                <strong class="text-success">SAR 249</strong>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Split AC Uninstallation</span>
+                                <strong class="text-success">SAR 109</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{{ route('frontend.contact') }}" class="btn btn-success rounded-pill">Get Package Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detailed AC Parts & Services End -->
 
     <!-- Contact CTA Start -->
     <div class="container-fluid bg-primary py-6 px-5">
