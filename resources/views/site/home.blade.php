@@ -13,7 +13,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             {{-- <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i> --}}
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">Create your dream with us, where every
+                            <h1 class="display-5 text-uppercase text-white mb-md-4">Create your dream with us, where every
                                 step brings joy!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Get A Quote</a>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             {{-- <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i> --}}
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">From HVAC to Design and IT to Plumbing,
+                            <h1 class="display-5 text-uppercase text-white mb-md-4">From HVAC to Design and IT to Plumbing,
                                 we build your dream!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Contact Us</a>
                         </div>
