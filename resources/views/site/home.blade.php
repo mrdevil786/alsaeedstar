@@ -80,7 +80,7 @@
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
-                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="{{ asset('frontend/img/about.jpg') }}"
+                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="{{ asset('frontend/img/home-01.png') }}"
                         style="object-fit: cover;">
                 </div>
             </div>
@@ -123,8 +123,8 @@
     <div class="container-fluid py-6 px-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/hvac-systems.jpg') }}" 
+                <div class="h-100">
+                    <img class="w-100 h-100" src="{{ asset('frontend/img/hvac-systems.png') }}" 
                          style="object-fit: cover; border-radius: 10px;" alt="HVAC Systems">
                 </div>
             </div>
