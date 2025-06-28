@@ -41,10 +41,10 @@
                 </div>
                 <p class="mb-4">From new installations to complex renovations and routine maintenance, we ensure your HVAC systems operate at peak performance, providing comfort, efficiency, and reliability. Our team of skilled professionals uses state-of-the-art equipment and follows industry best practices to deliver exceptional results. Whether you need emergency repairs, system upgrades, or preventive maintenance, we're committed to keeping your indoor environment comfortable and healthy year-round. Trust us to handle all your heating, cooling, and ventilation needs with precision and care.</p>
             </div>
-            <div class="col-lg-5 pb-5" style="min-height: 400px;">
-                <div class="h-100 ms-5">
-                    <img class="w-100 h-100" src="{{ asset('frontend/img/hvac-hero.png') }}"
-                        style="object-fit: cover; border-radius: 10px;">
+            <div class="col-lg-5">
+                <div class="h-100">
+                    <img class="w-100 h-100" src="{{ asset('frontend/img/hvac-hero.png') }}" 
+                         style="object-fit: cover; border-radius: 10px;" alt="HVAC Systems">
                 </div>
             </div>
         </div>
