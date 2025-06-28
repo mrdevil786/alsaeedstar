@@ -92,8 +92,7 @@
     <!-- Services Start -->
     <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction
-                Services</h1>
+            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction, HVAC & IT Services</h1>
         </div>
         <div class="row g-5">
             @forelse($services as $service)
@@ -118,6 +117,77 @@
         </div>
     </div>
     <!-- Services End -->
+
+
+    <!-- HVAC Services Highlight Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/hvac-systems.jpg') }}" 
+                         style="object-fit: cover; border-radius: 10px;" alt="HVAC Systems">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 text-uppercase mb-4">Expert <span class="text-primary">HVAC Solutions</span></h1>
+                <h4 class="text-uppercase mb-3 text-body">Complete Heating, Ventilation & Air Conditioning Services</h4>
+                <p class="mb-4">From new installations to comprehensive maintenance, our certified HVAC professionals ensure your indoor environment remains comfortable and energy-efficient year-round.</p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-tools text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">New Installation</h6>
+                                <small>Complete system setup</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-warning rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-wrench text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">Renovation</h6>
+                                <small>System upgrades</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-success rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-cog text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">Maintenance</h6>
+                                <small>Regular service & repair</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-danger rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">24/7 Service</h6>
+                                <small>Emergency support</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <a href="{{ route('frontend.hvac') }}" class="btn btn-primary py-3 px-5 me-3">Learn More</a>
+                    <a href="{{ route('frontend.contact') }}" class="btn btn-outline-primary py-3 px-5">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HVAC Services Highlight End -->
 
 
     <!-- Appointment Start -->

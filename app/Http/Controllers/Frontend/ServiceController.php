@@ -15,4 +15,9 @@ class ServiceController extends Controller
         $testimonials = Testimonial::where('status', 'active')->latest()->get();
         return view('site.service', compact('services', 'testimonials'));
     }
+
+    public function hvac()
+    {
+        return view('site.hvac');
+    }
 }

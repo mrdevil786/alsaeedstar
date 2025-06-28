@@ -21,8 +21,7 @@
     <!-- Services Start -->
     <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction
-                Services</h1>
+            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction, HVAC & IT Services</h1>
         </div>
         <div class="row g-5">
             @forelse($services as $service)

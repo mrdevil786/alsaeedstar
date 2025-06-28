@@ -30,24 +30,20 @@
                 <div class="col-sm-6">
                     <h4 class="text-black text-uppercase mb-4">Quick Links</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our
-                            Services</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The
-                            Team</a>
-                        <a class="text-black-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.home') }}"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.about') }}"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.service') }}"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Services</a>
+                        <a class="text-black-50" href="{{ route('frontend.contact') }}"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h4 class="text-black text-uppercase mb-4">Popular Links</h4>
+                    <h4 class="text-black text-uppercase mb-4">Our Services</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our
-                            Services</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The
-                            Team</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Installation</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Renovation</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Maintenance</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.career') }}"><i class="fa fa-angle-right me-2"></i>Careers</a>
                         <a class="text-black-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
                 </div>

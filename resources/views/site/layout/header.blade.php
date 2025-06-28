@@ -96,6 +96,7 @@
                     <a href="{{ route('frontend.home') }}" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
                     <a href="{{ route('frontend.about') }}" class="nav-item nav-link @yield('frontend-about-section')">About</a>
                     <a href="{{ route('frontend.service') }}" class="nav-item nav-link @yield('frontend-service-section')">Service</a>
+                    <a href="{{ route('frontend.hvac') }}" class="nav-item nav-link @yield('frontend-hvac-section')">HVAC</a>
                     <a href="{{ route('frontend.career') }}" class="nav-item nav-link @yield('frontend-career-section')">Career</a>
                     {{-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
