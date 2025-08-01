@@ -11,6 +11,16 @@ return [
             ],
         ],
     ],
+    'services' => [
+        'items' => [
+            [
+                'label' => 'Services',
+                'icon' => 'fe fe-layers',
+                'route' => 'admin.services.index',
+                'active' => 'admin/services*',
+            ],
+        ],
+    ],
     'contacts' => [
         'items' => [
             [
@@ -38,6 +48,26 @@ return [
                 'icon' => 'fe fe-star',
                 'route' => 'admin.testimonials.index',
                 'active' => 'admin/testimonials*',
+            ],
+        ],
+    ],
+    'careers' => [
+        'items' => [
+            [
+                'label' => 'Careers',
+                'icon' => 'fe fe-briefcase',
+                'route' => 'admin.careers.index',
+                'active' => 'admin/careers*',
+            ],
+        ],
+    ],
+    'applications' => [
+        'items' => [
+            [
+                'label' => 'Applications',
+                'icon' => 'fe fe-file-text',
+                'route' => 'admin.applications.index',
+                'active' => 'admin/applications*',
             ],
         ],
     ],

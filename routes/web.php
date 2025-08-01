@@ -1,13 +1,16 @@
 <?php
 
+use App\Http\Controllers\Admin\ApplicationsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\CareersController;
 use App\Http\Controllers\Admin\ContactsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProfilesController;
 use App\Http\Controllers\Admin\TeamsController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\ServiceController;
 
 // Guest routes
 Route::prefix('admin')->name('admin.')->middleware('guest')->group(function () {
@@ -21,12 +24,54 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
     Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
 
+    // Applications management routes
+    Route::prefix('applications')->name('applications.')->controller(ApplicationsController::class)->group(function () {
+
+        Route::middleware('admin')->group(function () {
+            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::put('status', 'status')->name('status');
+            Route::post('create', 'create')->name('create');
+        });
+
+        Route::middleware('manager')->group(function () {
+            Route::post('store', 'store')->name('store');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::put('update/{id}', 'update')->name('update');
+        });
+
+        Route::middleware('member')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'view')->name('view');
+        });
+    });
+
+    // Career management routes
+    Route::prefix('careers')->name('careers.')->controller(CareersController::class)->group(function () {
+
+        Route::middleware('admin')->group(function () {
+            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::put('status', 'status')->name('status');
+            Route::post('create', 'create')->name('create');
+        });
+
+        Route::middleware('manager')->group(function () {
+            Route::post('store', 'store')->name('store');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::put('update/{id}', 'update')->name('update');
+        });
+
+        Route::middleware('member')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'view')->name('view');
+        });
+    });
+
     // Testimonials management routes
     Route::prefix('testimonials')->name('testimonials.')->controller(TestimonialController::class)->group(function () {
 
         // Routes for admins
         Route::middleware('admin')->group(function () {
-            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::delete('/{id}', 'destroy')->name('destroy');
             Route::put('status', 'status')->name('status');
             Route::post('create', 'create')->name('create');
         });
@@ -124,6 +169,29 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
             Route::get('view/{id}', 'view')->name('view');
             Route::post('update', 'updateProfile')->name('update');
             Route::post('update-password', 'updatePassword')->name('update.password');
+        });
+    });
+
+    // Service routes
+    Route::prefix('services')->name('services.')->controller(ServiceController::class)->group(function () {
+        // Routes for admins
+        Route::middleware('admin')->group(function () {
+            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::put('status', 'status')->name('status');
+            Route::post('create', 'create')->name('create');
+        });
+
+        // Routes for managers
+        Route::middleware('manager')->group(function () {
+            Route::post('store', 'store')->name('store');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::put('update/{id}', 'update')->name('update');
+        });
+
+        // Routes for members
+        Route::middleware('member')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'view')->name('view');
         });
     });
 });

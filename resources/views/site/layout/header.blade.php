@@ -32,6 +32,19 @@
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P94NV8JDP2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-P94NV8JDP2');
+</script>
+
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid px-5 d-none d-lg-block">
@@ -41,9 +54,7 @@
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Our Office</h6>
-                        <a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank">Thabit Ibn Uddai, Ad Dhubbat,
-                            Riyadh 12623,
-                            KSA</a>
+                        <a href="https://maps.app.goo.gl/EFSyh53gF2wbauWC8" target="blank">Prince Abdulaziz bin Musaed bin Julawi 12628</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +72,7 @@
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
                         <h6 class="text-uppercase fw-bold">Call Us</h6>
-                        <a href="tel:+966536161198">+966 53 616 1198</a>
+                        <a href="tel:+966536161198">+966 (53) 616-1198</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +85,7 @@
     <div class="container-fluid sticky-top bg-light bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-light bg-light-radial navbar-light py-3 py-lg-0">
             <a href="{{ route('frontend.home') }}" class="navbar-brand d-flex align-items-center">
-                <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt=""
+                <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt=""
                     class="header-brand-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -85,6 +96,8 @@
                     <a href="{{ route('frontend.home') }}" class="nav-item nav-link @yield('frontend-home-section')">Home</a>
                     <a href="{{ route('frontend.about') }}" class="nav-item nav-link @yield('frontend-about-section')">About</a>
                     <a href="{{ route('frontend.service') }}" class="nav-item nav-link @yield('frontend-service-section')">Service</a>
+                    <a href="{{ route('frontend.hvac') }}" class="nav-item nav-link @yield('frontend-hvac-section')">HVAC</a>
+                    <a href="{{ route('frontend.career') }}" class="nav-item nav-link @yield('frontend-career-section')">Career</a>
                     {{-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">

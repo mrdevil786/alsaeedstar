@@ -12,7 +12,7 @@ class TeamsController extends Controller
     // RETRIEVE ALL TEAMS AND DISPLAY THEM IN A VIEW
     public function index()
     {
-        $teams = Team::all();
+        $teams = Team::latest()->get();
         return view('admin.team.index', compact('teams'));
     }
 

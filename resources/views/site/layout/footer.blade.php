@@ -3,16 +3,15 @@
     <div class="row g-5">
         <div class="col-lg-6 pe-lg-5">
             <a href="{{ url('/') }}" class="mb-3 navbar-brand d-flex align-items-center">
-                <img src="{{ asset('assets/images/brand/logo-no-background.png') }}" alt=""
+                <img src="{{ asset('assets/images/brand/logo-black.svg') }}" alt=""
                     class="header-brand-img">
             </a>
-            <p>Welcome to Al Saeed Star Co. Ltd., where innovation drives excellence in construction, HVAC, IT services,
+            <p>Welcome to Al Najm Al Saeed Co. Ltd., where innovation drives excellence in construction, HVAC, IT services,
                 and maintenance. Our expert team delivers precise, tailored solutions to meet your needs with unmatched
                 expertise.</p>
-            <p><a href="https://maps.app.goo.gl/1frp8kzmvCioD9XL8" target="blank"><i
-                        class="fa fa-map-marker-alt me-2"></i>Thabit Ibn
-                    Uddai, Ad Dhubbat, Riyadh 12623, KSA</a></p>
-            <p><a href="tel:+966536161198"><i class="fa fa-phone-alt me-2"></i>+966 53 616 1198</a></p>
+            <p><a href="https://maps.app.goo.gl/EFSyh53gF2wbauWC8" target="blank"><i
+                        class="fa fa-map-marker-alt me-2"></i>Prince Abdulaziz bin Musaed bin Julawi 12628, Riyadh, Saudi Arabia</a></p>
+            <p><a href="tel:+966536161198"><i class="fa fa-phone-alt me-2"></i>+966 (53) 616-1198</a></p>
             <p><a href="mailto:info@alsaeedstar.com"><i class="fa fa-envelope me-2"></i>info@alsaeedstar.com</a></p>
             <div class="d-flex justify-content-start mt-4">
                 <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i
@@ -31,24 +30,20 @@
                 <div class="col-sm-6">
                     <h4 class="text-black text-uppercase mb-4">Quick Links</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our
-                            Services</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The
-                            Team</a>
-                        <a class="text-black-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.home') }}"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.about') }}"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.service') }}"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Services</a>
+                        <a class="text-black-50" href="{{ route('frontend.contact') }}"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h4 class="text-black text-uppercase mb-4">Popular Links</h4>
+                    <h4 class="text-black text-uppercase mb-4">Our Services</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our
-                            Services</a>
-                        <a class="text-black-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The
-                            Team</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Installation</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Renovation</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.hvac') }}"><i class="fa fa-angle-right me-2"></i>HVAC Maintenance</a>
+                        <a class="text-black-50 mb-2" href="{{ route('frontend.career') }}"><i class="fa fa-angle-right me-2"></i>Careers</a>
                         <a class="text-black-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                     </div>
                 </div>

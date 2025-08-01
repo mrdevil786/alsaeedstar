@@ -65,7 +65,7 @@
                             action="{{ route('admin.submit.login') }}">
                             @csrf
                             <span class="login100-form-title pb-5">
-                                {{ env('APP_NAME') }} – Login
+                                Al Najm Al Saeed – Login
                             </span>
 
                             @include('admin.includes.alert')

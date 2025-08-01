@@ -1,16 +1,16 @@
 @extends('admin.layout.main')
 
-@section('admin-page-title', 'Testimonials')
+@section('admin-page-title', 'Services')
 
 @section('admin-main-section')
 
     <!-- PAGE-HEADER -->
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
-            <h1 class="page-title">Manage Testimonials</h1>
+            <h1 class="page-title">Manage Services</h1>
             @if (auth()->user()->user_role == 1)
                 <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Testimonial</button>
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Service</button>
             @endif
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">All Testimonials</h3>
+                    <h3 class="card-title">All Services</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -29,10 +29,10 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0"><i class="fa fa-list"></i></th>
-                                    <th class="wd-15p border-bottom-0">Avatar</th>
-                                    <th class="wd-20p border-bottom-0">Name</th>
+                                    <th class="wd-15p border-bottom-0">Image</th>
                                     <th class="wd-20p border-bottom-0">Title</th>
-                                    <th class="wd-30p border-bottom-0">Description</th>
+                                    <th class="wd-15p border-bottom-0">Icon</th>
+                                    <th class="wd-20p border-bottom-0">Description</th>
                                     @if (auth()->user()->user_role == 1)
                                         <th class="wd-25p border-bottom-0">Status</th>
                                     @endif
@@ -40,43 +40,40 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($testimonials as $testimonial)
+                                @foreach ($services as $service)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td class="align-middle text-center"><img alt="avatar"
-                                                class="avatar avatar-sm br-7" src="{{ asset($testimonial->avatar) }}"></td>
-                                        <td>{{ $testimonial->name }}</td>
-                                        <td>{{ $testimonial->title }}</td>
-                                        <td>{{ \Illuminate\Support\Str::limit($testimonial->description, 30, '...') }}</td>
+                                        <td class="align-middle text-center">
+                                            <img alt="image" class="avatar avatar-sm br-7" 
+                                                src="{{ asset($service->image) }}">
+                                        </td>
+                                        <td>{{ $service->title }}</td>
+                                        <td>{{ $service->icon }}</td>
+                                        <td>{{ Str::limit($service->description, 20) }}</td>
                                         @if (auth()->user()->user_role == 1)
                                             <td class="text-center">
                                                 <label class="custom-switch form-switch mb-0">
                                                     <input type="checkbox" name="custom-switch-radio"
-                                                        class="custom-switch-input"
-                                                        data-testimonial-id="{{ $testimonial->id }}"
-                                                        {{ $testimonial->status == 'active' ? 'checked' : '' }}>
+                                                        class="custom-switch-input" data-service-id="{{ $service->id }}"
+                                                        {{ $service->status == 'active' ? 'checked' : '' }}>
                                                     <span class="custom-switch-indicator"></span>
                                                 </label>
                                             </td>
                                         @endif
                                         <td class="text-center">
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary"
-                                                href="{{ route('admin.testimonials.view', $testimonial->id) }}" />
+                                                href="{{ route('admin.services.view', $service->id) }}" />
 
                                             @if (auth()->user()->user_role != 3)
                                                 <x-buttons.action-pill-button
-                                                    href="{{ route('admin.testimonials.edit', $testimonial->id) }}"
+                                                    href="{{ route('admin.services.edit', $service->id) }}"
                                                     iconClass="fa fa-pencil" iconColor="warning"
                                                     modalTarget="editUserModal" />
                                             @endif
                                             @if (auth()->user()->user_role == 1)
-                                                <form action="{{ route('admin.testimonials.destroy', $testimonial->id) }}"
-                                                    method="POST" class="d-inline">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <x-buttons.action-pill-button type="submit" iconClass="fa fa-trash"
-                                                        iconColor="danger" />
-                                                </form>
+                                                <x-buttons.action-pill-button
+                                                    href="{{ route('admin.services.destroy', $service->id) }}"
+                                                    iconClass="fa fa-trash" iconColor="danger" />
                                             @endif
                                         </td>
                                     </tr>
@@ -91,19 +88,26 @@
     <!-- End Row -->
 
     <!--Add Modal - Right Offcanvas-->
-    <x-modal.right-offcanvas title="Add New Testimonial" action="{{ route('admin.testimonials.store') }}" method="POST">
+    <x-modal.right-offcanvas title="Add New Service" action="{{ route('admin.services.store') }}" method="POST">
 
         <div class="col-lg-12 mb-3">
-            <label class="form-label mt-0" for="avatar">Avatar</label>
-            <input type="file" class="dropify" name="avatar" data-bs-height="180" />
-            @error('avatar')
+            <label class="form-label mt-0" for="image">Image</label>
+            <input type="file" class="dropify" name="image" data-bs-height="180" />
+            @error('image')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
 
-        <x-fields.input-field label="Full Name" name="name" />
         <x-fields.input-field label="Title" name="title" />
-        <x-fields.input-field label="Description" name="description" />
+        <x-fields.input-field label="Icon (FontAwesome Class)" name="icon" placeholder="fas fa-cog" />
+        
+        <div class="col-lg-12 mb-3">
+            <label class="form-label mt-0" for="description">Description</label>
+            <textarea name="description" class="form-control" rows="4"></textarea>
+            @error('description')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
 
     </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
@@ -133,14 +137,14 @@
     <script>
         $(document).ready(function() {
             $('input[name="custom-switch-radio"]').change(function() {
-                var testimonialId = $(this).data('testimonial-id');
+                var serviceId = $(this).data('service-id');
                 var status = $(this).prop('checked') ? 'active' : 'blocked';
 
                 $.ajax({
-                    url: "{{ route('admin.testimonials.status') }}",
+                    url: "{{ route('admin.services.status') }}",
                     method: "PUT",
                     data: {
-                        id: testimonialId,
+                        id: serviceId,
                         status: status,
                         _token: "{{ csrf_token() }}"
                     },
@@ -160,7 +164,7 @@
                     error: function(xhr, status, error) {
                         $.growl.error1({
                             title: 'Error',
-                            message: 'An error occurred while updating testimonial status.'
+                            message: 'An error occurred while updating service status.'
                         });
                     }
                 });

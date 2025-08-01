@@ -1,16 +1,16 @@
 @extends('admin.layout.main')
 
-@section('admin-page-title', 'Testimonials')
+@section('admin-page-title', 'Career Openings')
 
 @section('admin-main-section')
 
     <!-- PAGE-HEADER -->
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
-            <h1 class="page-title">Manage Testimonials</h1>
+            <h1 class="page-title">Manage Job Openings</h1>
             @if (auth()->user()->user_role == 1)
                 <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Testimonial</button>
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Job</button>
             @endif
         </div>
     </div>
@@ -21,18 +21,18 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">All Testimonials</h3>
+                    <h3 class="card-title">All Job Openings</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered text-nowrap border-bottomm" id="file-datatable">
+                        <table class="table table-bordered text-nowrap border-bottom" id="file-datatable">
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0"><i class="fa fa-list"></i></th>
-                                    <th class="wd-15p border-bottom-0">Avatar</th>
-                                    <th class="wd-20p border-bottom-0">Name</th>
-                                    <th class="wd-20p border-bottom-0">Title</th>
-                                    <th class="wd-30p border-bottom-0">Description</th>
+                                    <th class="wd-20p border-bottom-0">Job Title</th>
+                                    <th class="wd-20p border-bottom-0">Description</th>
+                                    <th class="wd-15p border-bottom-0">Location</th>
+                                    <th class="wd-15p border-bottom-0">Type</th>
                                     @if (auth()->user()->user_role == 1)
                                         <th class="wd-25p border-bottom-0">Status</th>
                                     @endif
@@ -40,43 +40,38 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($testimonials as $testimonial)
+                                @foreach ($jobOpenings as $jobOpening)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td class="align-middle text-center"><img alt="avatar"
-                                                class="avatar avatar-sm br-7" src="{{ asset($testimonial->avatar) }}"></td>
-                                        <td>{{ $testimonial->name }}</td>
-                                        <td>{{ $testimonial->title }}</td>
-                                        <td>{{ \Illuminate\Support\Str::limit($testimonial->description, 30, '...') }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($jobOpening->title, 20, '...') }}</td>
+                                        <td>{{ \Illuminate\Support\Str::limit($jobOpening->description, 30, '...') }}</td>
+                                        <td>{{ $jobOpening->location }}</td>
+                                        <td>{{ ucfirst($jobOpening->type) }}</td>
                                         @if (auth()->user()->user_role == 1)
                                             <td class="text-center">
                                                 <label class="custom-switch form-switch mb-0">
                                                     <input type="checkbox" name="custom-switch-radio"
-                                                        class="custom-switch-input"
-                                                        data-testimonial-id="{{ $testimonial->id }}"
-                                                        {{ $testimonial->status == 'active' ? 'checked' : '' }}>
+                                                        class="custom-switch-input" data-career-id="{{ $jobOpening->id }}"
+                                                        {{ $jobOpening->status == 'active' ? 'checked' : '' }}>
                                                     <span class="custom-switch-indicator"></span>
                                                 </label>
                                             </td>
                                         @endif
                                         <td class="text-center">
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary"
-                                                href="{{ route('admin.testimonials.view', $testimonial->id) }}" />
+                                                href="{{ route('admin.careers.view', $jobOpening->id) }}" />
 
                                             @if (auth()->user()->user_role != 3)
                                                 <x-buttons.action-pill-button
-                                                    href="{{ route('admin.testimonials.edit', $testimonial->id) }}"
+                                                    href="{{ route('admin.careers.edit', $jobOpening->id) }}"
                                                     iconClass="fa fa-pencil" iconColor="warning"
-                                                    modalTarget="editUserModal" />
+                                                    modalTarget="editCareerModal" />
                                             @endif
+
                                             @if (auth()->user()->user_role == 1)
-                                                <form action="{{ route('admin.testimonials.destroy', $testimonial->id) }}"
-                                                    method="POST" class="d-inline">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <x-buttons.action-pill-button type="submit" iconClass="fa fa-trash"
-                                                        iconColor="danger" />
-                                                </form>
+                                                <x-buttons.action-pill-button
+                                                    href="{{ route('admin.careers.destroy', $jobOpening->id) }}"
+                                                    iconClass="fa fa-trash" iconColor="danger" />
                                             @endif
                                         </td>
                                     </tr>
@@ -90,28 +85,28 @@
     </div>
     <!-- End Row -->
 
-    <!--Add Modal - Right Offcanvas-->
-    <x-modal.right-offcanvas title="Add New Testimonial" action="{{ route('admin.testimonials.store') }}" method="POST">
+    <!-- Add Modal - Right Offcanvas -->
+    <x-modal.right-offcanvas title="Add New Job Opening" action="{{ route('admin.careers.store') }}" method="POST">
+        <x-fields.input-field label="Job Title" name="title" />
 
-        <div class="col-lg-12 mb-3">
-            <label class="form-label mt-0" for="avatar">Avatar</label>
-            <input type="file" class="dropify" name="avatar" data-bs-height="180" />
-            @error('avatar')
-                <div class="text-danger">{{ $message }}</div>
+        <div class="col-xl-12 mb-3">
+            <label class="form-label mt-0" for="description">Description</label>
+            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"
+                placeholder="Enter job description">{{ old('description') }}</textarea>
+            @error('description')
+                <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
 
-        <x-fields.input-field label="Full Name" name="name" />
-        <x-fields.input-field label="Title" name="title" />
-        <x-fields.input-field label="Description" name="description" />
-
+        <x-fields.input-field label="Location" name="location" />
+        <x-fields.dropdown-field label="Job Type" name="type" :options="['full-time' => 'Full-Time', 'part-time' => 'Part-Time', 'contract' => 'Contract']" />
     </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
 
 @endsection
 
 @section('custom-script')
-    <!-- DATA TABLE JS-->
+    <!-- DATA TABLE JS -->
     <script src="{{ asset('../assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('../assets/plugins/datatable/js/dataTables.bootstrap5.js') }}"></script>
     <script src="{{ asset('../assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
@@ -133,14 +128,14 @@
     <script>
         $(document).ready(function() {
             $('input[name="custom-switch-radio"]').change(function() {
-                var testimonialId = $(this).data('testimonial-id');
+                var careerId = $(this).data('career-id');
                 var status = $(this).prop('checked') ? 'active' : 'blocked';
 
                 $.ajax({
-                    url: "{{ route('admin.testimonials.status') }}",
+                    url: "{{ route('admin.careers.status') }}",
                     method: "PUT",
                     data: {
-                        id: testimonialId,
+                        id: careerId,
                         status: status,
                         _token: "{{ csrf_token() }}"
                     },
@@ -160,7 +155,7 @@
                     error: function(xhr, status, error) {
                         $.growl.error1({
                             title: 'Error',
-                            message: 'An error occurred while updating testimonial status.'
+                            message: 'An error occurred while updating job opening status.'
                         });
                     }
                 });

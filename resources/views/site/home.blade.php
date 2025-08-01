@@ -13,7 +13,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             {{-- <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i> --}}
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">Create your dream with us, where every
+                            <h1 class="display-5 text-uppercase text-white mb-md-4">Create your dream with us, where every
                                 step brings joy!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Get A Quote</a>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             {{-- <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i> --}}
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">From HVAC to Design and IT to Plumbing,
+                            <h1 class="display-5 text-uppercase text-white mb-md-4">From HVAC to Design and IT to Plumbing,
                                 we build your dream!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Contact Us</a>
                         </div>
@@ -51,7 +51,7 @@
                 <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Experts</span> in
                     Construction, Maintenance, HVAC, and IT Solutions</h1>
                 <h4 class="text-uppercase mb-3 text-body">Innovative Solutions for a Diverse Range of Needs</h4>
-                <p>At Al Saeed Star Co. Ltd., we excel in delivering top-tier construction and maintenance services,
+                <p>At Al Najm Al Saeed Co. Ltd., we excel in delivering top-tier construction and maintenance services,
                     alongside advanced HVAC and IT solutions. Our dedication to quality and innovation ensures that we
                     provide tailored, comprehensive solutions that address the unique requirements of each client. From
                     creating robust structures to maintaining them with precision, and optimizing your HVAC and IT systems,
@@ -73,14 +73,14 @@
                     </div>
                 </div>
                 <p class="mb-4">Our expertise spans across various sectors, ensuring that we meet the evolving needs of
-                    our clients with precision and excellence. Al Saeed Star Co. Ltd. is your trusted partner for
+                    our clients with precision and excellence. Al Najm Al Saeed Co. Ltd. is your trusted partner for
                     high-quality, reliable, and efficient services that drive success and sustainability in every project we
                     undertake.</p>
                 <img src="{{ asset('frontend/img/signature.png') }}" alt="Signature">
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
-                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="{{ asset('frontend/img/about.jpg') }}"
+                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="{{ asset('frontend/img/home-01.png') }}"
                         style="object-fit: cover;">
                 </div>
             </div>
@@ -92,103 +92,102 @@
     <!-- Services Start -->
     <div class="container-fluid bg-light py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction
-                Services</h1>
+            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction, HVAC & IT Services</h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-15.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-wind text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">HVAC Systems</h4>
-                        <p>Providing expert HVAC solutions for residential and commercial spaces, focusing on efficient air
-                            conditioning, heating, and ventilation systems to ensure optimal indoor climate control.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-2.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-building text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Building Construction</h4>
-                        <p>Delivering comprehensive building construction services, from initial planning to final finishes,
-                            ensuring quality, safety, and durability for residential, commercial, and industrial projects.
-                        </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+            @forelse($services as $service)
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                        <img class="img-fluid" src="{{ asset($service->image) }}" alt="{{ $service->title }}">
+                        <div class="service-icon bg-white">
+                            <i class="{{ $service->icon }} text-primary"></i>
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h4 class="text-uppercase mb-3">{{ $service->title }}</h4>
+                            <p>{{ $service->description }}</p>
+                            {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-3.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-couch text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Interior Design</h4>
-                        <p>Creating unique, functional interior spaces that reflect client personalities and needs,
-                            combining aesthetic appeal with practical design for residential and commercial environments.
-                        </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
+            @empty
+                <div class="col-12 text-center">
+                    <p class="text-muted">No services available at the moment.</p>
+                </div>
+            @endforelse
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- HVAC Services Highlight Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="h-100">
+                    <img class="w-100 h-100" src="{{ asset('frontend/img/hvac-systems.png') }}" 
+                         style="object-fit: cover; border-radius: 10px;" alt="HVAC Systems">
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-4.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-tools text-primary"></i>
+            <div class="col-lg-6">
+                <h1 class="display-5 text-uppercase mb-4">Expert <span class="text-primary">HVAC Solutions</span></h1>
+                <h4 class="text-uppercase mb-3 text-body">Complete Heating, Ventilation & Air Conditioning Services</h4>
+                <p class="mb-4">From new installations to comprehensive maintenance, our certified HVAC professionals ensure your indoor environment remains comfortable and energy-efficient year-round.</p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-tools text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">New Installation</h6>
+                                <small>Complete system setup</small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Electro-Mechanical Works</h4>
-                        <p>Specializing in electro-mechanical installations, including electrical and plumbing systems,
-                            providing reliable, safe, and efficient solutions for diverse residential and commercial needs.
-                        </p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-warning rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-wrench text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">Renovation</h6>
+                                <small>System upgrades</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-success rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-cog text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">Maintenance</h6>
+                                <small>Regular service & repair</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-danger rounded-circle me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-uppercase mb-1">24/7 Service</h6>
+                                <small>Emergency support</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-18.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-umbrella text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Shades</h4>
-                        <p>Offering innovative shading solutions, from retractable awnings to custom shade structures,
-                            designed to enhance outdoor comfort and protect against harsh weather conditions.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
-                    <img class="img-fluid" src="{{ asset('frontend/img/service-17.webp') }}" alt="">
-                    <div class="service-icon bg-white">
-                        <i class="fa fa-3x fa-laptop-code text-primary"></i>
-                    </div>
-                    <div class="px-4 pb-4">
-                        <h4 class="text-uppercase mb-3">Website Development</h4>
-                        <p>Crafting user-friendly, modern websites with responsive design, tailored functionality, and SEO
-                            optimization, aimed at enhancing client visibility and engagement online.</p>
-                        {{-- <a class="btn text-primary" href="">Read More <i class="bi bi-arrow-right"></i></a> --}}
-                    </div>
+
+                <div class="d-flex">
+                    <a href="{{ route('frontend.hvac') }}" class="btn btn-primary py-3 px-5 me-3">Learn More</a>
+                    <a href="{{ route('frontend.contact') }}" class="btn btn-outline-primary py-3 px-5">Get Quote</a>
                 </div>
             </div>
         </div>
-        {{-- <div class="text-center mt-4">
-            <a class="btn btn-primary" href="#">See More <i class="bi bi-arrow-right"></i></a>
-        </div> --}}
     </div>
-    <!-- Services End -->
+    <!-- HVAC Services Highlight End -->
 
 
     <!-- Appointment Start -->
@@ -439,9 +438,9 @@
                     <img class="img-fluid w-100 h-100" src="{{ asset('frontend/img/testimonial.jpg') }}">
                 </div>
                 <div class="col-xl-8 col-lg-7 col-md-12">
-                    @foreach ($testimonials as $testimonial)
-                        <div class="testimonial bg-light">
-                            <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial bg-light">
+                        <div class="owl-carousel testimonial-carousel">
+                            @foreach ($testimonials as $testimonial)
                                 <div class="row gx-4 align-items-center">
                                     <div class="col-xl-4 col-lg-5 col-md-5">
                                         <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0"
@@ -454,9 +453,9 @@
                                             {{ $testimonial->description }}</p>
                                     </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                    @endforeach
+                    </div>
                 </div>
             </div>
         </div>

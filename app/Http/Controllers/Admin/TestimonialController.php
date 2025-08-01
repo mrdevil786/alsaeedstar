@@ -11,7 +11,7 @@ class TestimonialController extends Controller
 {
     public function index()
     {
-        $testimonials = Testimonial::all();
+        $testimonials = Testimonial::latest()->get();
         return view('admin.testimonial.index', compact('testimonials'));
     }
 
@@ -54,9 +54,8 @@ class TestimonialController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $request->validate([
-            'avatar' => 'nullabe|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
             'name' => 'required|string|max:255',
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:255',
@@ -73,5 +72,28 @@ class TestimonialController extends Controller
         $testimonial->save();
 
         return redirect()->route('admin.testimonials.index')->with('success', 'Testimonial Updated Successfully');
+    }
+
+    // UPDATE TESTIMONIAL'S STATUS (ACTIVE OR BLOCKED)
+    public function status(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|numeric|exists:testimonials,id',
+            'status' => 'required|in:active,blocked',
+        ]);
+
+        $testimonial = Testimonial::findOrFail($request->id);
+        $testimonial->update(['status' => $request->status]);
+
+        return response()->json(['message' => 'Testimonial status updated successfully']);
+    }
+
+    // DELETE A TESTIMONIAL
+    public function destroy($id)
+    {
+        $testimonial = Testimonial::findOrFail($id);
+        $testimonial->delete();
+
+        return redirect()->route('admin.testimonials.index')->with('success', 'Testimonial deleted successfully!');
     }
 }
